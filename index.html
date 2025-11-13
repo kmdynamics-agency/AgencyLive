@@ -16,6 +16,57 @@
       --dark: #000000;
     }
 
+    /* THEME VARIATIONS */
+    body[data-theme="cyber"] {
+      --neon-cyan: #00fff2;
+      --neon-pink: #ff00ea;
+      --neon-purple: #9d00ff;
+    }
+
+    body[data-theme="sunset"] {
+      --neon-cyan: #ff6b35;
+      --neon-pink: #f7931e;
+      --neon-purple: #ffd700;
+    }
+
+    body[data-theme="matrix"] {
+      --neon-cyan: #00ff41;
+      --neon-pink: #39ff14;
+      --neon-purple: #0dff00;
+    }
+
+    body[data-theme="royal"] {
+      --neon-cyan: #6a0dad;
+      --neon-pink: #ff00ff;
+      --neon-purple: #9d00ff;
+    }
+
+    body[data-theme="fire"] {
+      --neon-cyan: #ff0000;
+      --neon-pink: #ff4500;
+      --neon-purple: #ff6347;
+    }
+
+    body[data-theme="ocean"] {
+      --neon-cyan: #00bfff;
+      --neon-pink: #1e90ff;
+      --neon-purple: #4169e1;
+    }
+
+    /* Smooth theme transitions */
+    body,
+    .logo,
+    .gradient-text,
+    .hero h1 .line,
+    .section-title,
+    .btn-primary,
+    .service-card,
+    .pricing-card,
+    nav a,
+    .social-link {
+      transition: all 0.5s ease;
+    }
+
     body {
       font-family: 'Space Grotesk', sans-serif;
       background: #000;
@@ -1130,8 +1181,128 @@
       pointer-events: none;
     }
 
-    /* RESPONSIVE */
-    @media (max-width: 1024px) {
+    /* THEME SWITCHER PANEL */
+    .theme-switcher {
+      position: fixed;
+      right: 30px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 9999;
+      background: rgba(10, 10, 20, 0.95);
+      backdrop-filter: blur(20px);
+      border: 2px solid rgba(0, 255, 242, 0.3);
+      border-radius: 20px;
+      padding: 20px 15px;
+      box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+      transition: all 0.3s ease;
+    }
+
+    .theme-switcher:hover {
+      box-shadow: 0 15px 70px rgba(0, 255, 242, 0.4);
+      border-color: var(--neon-cyan);
+    }
+
+    .theme-switcher-title {
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: var(--neon-cyan);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+      text-align: center;
+      text-shadow: 0 0 10px var(--neon-cyan);
+    }
+
+    .theme-options {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .theme-btn {
+      width: 50px;
+      height: 50px;
+      border: 3px solid transparent;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .theme-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .theme-btn:hover::before {
+      opacity: 0.3;
+    }
+
+    .theme-btn:hover {
+      transform: scale(1.15);
+      box-shadow: 0 0 30px currentColor;
+    }
+
+    .theme-btn.active {
+      border-color: #fff;
+      box-shadow: 0 0 30px currentColor;
+      transform: scale(1.1);
+    }
+
+    .theme-btn[data-theme="cyber"] {
+      background: linear-gradient(135deg, #00fff2, #ff00ea, #9d00ff);
+    }
+
+    .theme-btn[data-theme="sunset"] {
+      background: linear-gradient(135deg, #ff6b35, #f7931e, #ffd700);
+    }
+
+    .theme-btn[data-theme="matrix"] {
+      background: linear-gradient(135deg, #00ff41, #39ff14, #0dff00);
+    }
+
+    .theme-btn[data-theme="royal"] {
+      background: linear-gradient(135deg, #6a0dad, #ff00ff, #9d00ff);
+    }
+
+    .theme-btn[data-theme="fire"] {
+      background: linear-gradient(135deg, #ff0000, #ff4500, #ff6347);
+    }
+
+    .theme-btn[data-theme="ocean"] {
+      background: linear-gradient(135deg, #00bfff, #1e90ff, #4169e1);
+    }
+
+    /* Theme labels on hover */
+    .theme-btn::after {
+      content: attr(data-label);
+      position: absolute;
+      right: 70px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(10, 10, 20, 0.95);
+      color: #fff;
+      padding: 8px 15px;
+      border-radius: 10px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+      border: 1px solid var(--neon-cyan);
+    }
+
+    .theme-btn:hover::after {
+      opacity: 1;
+    }
       .hero h1 { font-size: 5rem; }
       .services-grid { grid-template-columns: repeat(2, 1fr); }
       .pricing-grid { grid-template-columns: 1fr; }
@@ -1171,6 +1342,19 @@
   </style>
 </head>
 <body>
+
+  <!-- Theme Switcher Panel -->
+  <div class="theme-switcher">
+    <div class="theme-switcher-title">Themes</div>
+    <div class="theme-options">
+      <button class="theme-btn active" data-theme="cyber" data-label="Cyber"></button>
+      <button class="theme-btn" data-theme="sunset" data-label="Sunset"></button>
+      <button class="theme-btn" data-theme="matrix" data-label="Matrix"></button>
+      <button class="theme-btn" data-theme="royal" data-label="Royal"></button>
+      <button class="theme-btn" data-theme="fire" data-label="Fire"></button>
+      <button class="theme-btn" data-theme="ocean" data-label="Ocean"></button>
+    </div>
+  </div>
 
   <!-- Animated Background -->
   <div class="mega-bg"></div>
@@ -1579,6 +1763,65 @@
   </div>
 
   <script>
+    // THEME SWITCHER
+    const themeButtons = document.querySelectorAll('.theme-btn');
+    const body = document.body;
+
+    // Load saved theme
+    const savedTheme = localStorage.getItem('kmdynamics-theme') || 'cyber';
+    body.setAttribute('data-theme', savedTheme);
+    document.querySelector(`.theme-btn[data-theme="${savedTheme}"]`)?.classList.add('active');
+
+    themeButtons.forEach(btn => {
+      btn.addEventListener('click', function() {
+        const theme = this.getAttribute('data-theme');
+        
+        // Remove active class from all buttons
+        themeButtons.forEach(b => b.classList.remove('active'));
+        
+        // Add active class to clicked button
+        this.classList.add('active');
+        
+        // Apply theme
+        body.setAttribute('data-theme', theme);
+        
+        // Save theme preference
+        localStorage.setItem('kmdynamics-theme', theme);
+        
+        // Create ripple effect
+        const ripple = document.createElement('div');
+        ripple.style.cssText = `
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          width: 20px;
+          height: 20px;
+          background: var(--neon-cyan);
+          border-radius: 50%;
+          transform: translate(-50%, -50%);
+          pointer-events: none;
+          z-index: 10000;
+          animation: themeRipple 0.8s ease-out forwards;
+        `;
+        document.body.appendChild(ripple);
+        
+        setTimeout(() => ripple.remove(), 800);
+      });
+    });
+
+    // Add theme ripple animation
+    const themeStyle = document.createElement('style');
+    themeStyle.textContent = `
+      @keyframes themeRipple {
+        to {
+          width: 3000px;
+          height: 3000px;
+          opacity: 0;
+        }
+      }
+    `;
+    document.head.appendChild(themeStyle);
+
     // CUSTOM CURSOR
     const cursor = document.querySelector('.cursor');
     const cursorGlow = document.querySelector('.cursor-glow');
