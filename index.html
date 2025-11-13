@@ -99,15 +99,216 @@
       opacity: 0.6;
     }
 
-    .cursor-glow {
-      width: 50px;
-      height: 50px;
-      border: 2px solid var(--neon-cyan);
+    /* CURSOR TRAIL */
+    .cursor-trail {
+      width: 8px;
+      height: 8px;
+      background: var(--neon-cyan);
       border-radius: 50%;
       position: fixed;
       pointer-events: none;
-      z-index: 9998;
-      transition: all 0.2s ease;
+      z-index: 9997;
+      opacity: 0;
+      box-shadow: 0 0 20px var(--neon-cyan);
+      animation: trailFade 0.5s ease-out forwards;
+    }
+
+    @keyframes trailFade {
+      0% { opacity: 1; transform: scale(1); }
+      100% { opacity: 0; transform: scale(0); }
+    }
+
+    /* RIPPLE SHOCKWAVE */
+    .ripple-wave {
+      position: fixed;
+      border: 3px solid var(--neon-cyan);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9996;
+      animation: rippleExpand 1s ease-out forwards;
+    }
+
+    @keyframes rippleExpand {
+      0% {
+        width: 0;
+        height: 0;
+        opacity: 1;
+      }
+      100% {
+        width: 500px;
+        height: 500px;
+        opacity: 0;
+      }
+    }
+
+    /* CYBER GRID */
+    .cyber-grid {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      background-image: 
+        linear-gradient(var(--neon-cyan) 1px, transparent 1px),
+        linear-gradient(90deg, var(--neon-cyan) 1px, transparent 1px);
+      background-size: 100px 100px;
+      opacity: 0.1;
+      animation: gridMove 20s linear infinite;
+      perspective: 1000px;
+      transform-style: preserve-3d;
+    }
+
+    @keyframes gridMove {
+      0% { transform: translateZ(0) rotateX(60deg) translateY(0); }
+      100% { transform: translateZ(0) rotateX(60deg) translateY(100px); }
+    }
+
+    /* MATRIX RAIN */
+    .matrix-rain {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      pointer-events: none;
+      opacity: 0.3;
+    }
+
+    .matrix-column {
+      position: absolute;
+      font-family: monospace;
+      font-size: 14px;
+      color: var(--neon-cyan);
+      text-shadow: 0 0 10px var(--neon-cyan);
+      animation: matrixFall linear infinite;
+      white-space: nowrap;
+    }
+
+    @keyframes matrixFall {
+      0% { transform: translateY(-100%); }
+      100% { transform: translateY(100vh); }
+    }
+
+    /* AURORA WAVES */
+    .aurora-wave {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      pointer-events: none;
+      opacity: 0.4;
+    }
+
+    .aurora-layer {
+      position: absolute;
+      width: 200%;
+      height: 100%;
+      background: linear-gradient(90deg, 
+        transparent 0%,
+        var(--neon-cyan) 25%,
+        var(--neon-pink) 50%,
+        var(--neon-purple) 75%,
+        transparent 100%);
+      opacity: 0.2;
+      filter: blur(60px);
+      animation: auroraMove 15s ease-in-out infinite;
+    }
+
+    .aurora-layer:nth-child(2) {
+      animation-delay: 2s;
+      animation-duration: 12s;
+    }
+
+    .aurora-layer:nth-child(3) {
+      animation-delay: 4s;
+      animation-duration: 18s;
+    }
+
+    @keyframes auroraMove {
+      0%, 100% { transform: translateX(-50%) translateY(0) rotate(0deg); }
+      50% { transform: translateX(0%) translateY(-30px) rotate(5deg); }
+    }
+
+    /* FRACTAL PATTERNS */
+    .fractal-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      pointer-events: none;
+      opacity: 0.15;
+    }
+
+    .fractal-shape {
+      position: absolute;
+      border: 2px solid var(--neon-cyan);
+      animation: fractalSpin 10s linear infinite;
+    }
+
+    @keyframes fractalSpin {
+      0% { transform: rotate(0deg) scale(1); opacity: 0.5; }
+      50% { transform: rotate(180deg) scale(1.2); opacity: 0.8; }
+      100% { transform: rotate(360deg) scale(1); opacity: 0.5; }
+    }
+
+    /* GRADIENT FLOW BACKGROUND */
+    .gradient-flow {
+      position: fixed;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      z-index: 0;
+      background: radial-gradient(circle at 20% 50%, rgba(0, 255, 242, 0.2) 0%, transparent 50%),
+                  radial-gradient(circle at 80% 80%, rgba(255, 0, 234, 0.2) 0%, transparent 50%),
+                  radial-gradient(circle at 40% 20%, rgba(157, 0, 255, 0.2) 0%, transparent 50%);
+      animation: gradientRotate 20s linear infinite;
+    }
+
+    @keyframes gradientRotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* PARTICLE GALAXY */
+    .galaxy-particle {
+      position: fixed;
+      width: 3px;
+      height: 3px;
+      background: var(--neon-cyan);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 1;
+      box-shadow: 0 0 10px var(--neon-cyan);
+      animation: twinkle 2s ease-in-out infinite;
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.3; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.5); }
+    }
+
+    /* PARALLAX LAYERS */
+    .parallax-layer {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .parallax-shape {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(40px);
       opacity: 0.3;
     }
 
@@ -1343,6 +1544,35 @@
 </head>
 <body>
 
+  <!-- Effects Control Panel -->
+  <div class="effects-panel">
+    <div class="effects-panel-title">FX</div>
+    <div class="effect-toggle" data-effect="trails">
+      <div class="effect-checkbox active"></div>
+      <span>Trails</span>
+    </div>
+    <div class="effect-toggle" data-effect="ripples">
+      <div class="effect-checkbox active"></div>
+      <span>Ripples</span>
+    </div>
+    <div class="effect-toggle" data-effect="matrix">
+      <div class="effect-checkbox"></div>
+      <span>Matrix</span>
+    </div>
+    <div class="effect-toggle" data-effect="aurora">
+      <div class="effect-checkbox active"></div>
+      <span>Aurora</span>
+    </div>
+    <div class="effect-toggle" data-effect="fractals">
+      <div class="effect-checkbox"></div>
+      <span>Fractals</span>
+    </div>
+    <div class="effect-toggle" data-effect="galaxy">
+      <div class="effect-checkbox active"></div>
+      <span>Galaxy</span>
+    </div>
+  </div>
+
   <!-- Theme Switcher Panel -->
   <div class="theme-switcher">
     <div class="theme-switcher-title">Themes</div>
@@ -1355,6 +1585,28 @@
       <button class="theme-btn" data-theme="ocean" data-label="Ocean"></button>
     </div>
   </div>
+
+  <!-- Gradient Flow Background -->
+  <div class="gradient-flow"></div>
+
+  <!-- Cyber Grid -->
+  <div class="cyber-grid"></div>
+
+  <!-- Aurora Waves -->
+  <div class="aurora-wave">
+    <div class="aurora-layer"></div>
+    <div class="aurora-layer"></div>
+    <div class="aurora-layer"></div>
+  </div>
+
+  <!-- Fractal Background -->
+  <div class="fractal-bg" id="fractalBg"></div>
+
+  <!-- Matrix Rain Container -->
+  <div class="matrix-rain" id="matrixRain"></div>
+
+  <!-- Parallax Layers -->
+  <div class="parallax-layer" id="parallaxLayer"></div>
 
   <!-- Animated Background -->
   <div class="mega-bg"></div>
@@ -1763,6 +2015,246 @@
   </div>
 
   <script>
+    // EFFECTS STATE
+    const effects = {
+      trails: true,
+      ripples: true,
+      matrix: false,
+      aurora: true,
+      fractals: false,
+      galaxy: true
+    };
+
+    // Load saved effects
+    Object.keys(effects).forEach(key => {
+      const saved = localStorage.getItem(`effect-${key}`);
+      if (saved !== null) effects[key] = saved === 'true';
+    });
+
+    // CURSOR TRAILS
+    let trailInterval;
+    function createTrail(x, y) {
+      if (!effects.trails) return;
+      
+      const trail = document.createElement('div');
+      trail.className = 'cursor-trail';
+      trail.style.left = x + 'px';
+      trail.style.top = y + 'px';
+      document.body.appendChild(trail);
+      
+      setTimeout(() => trail.remove(), 500);
+    }
+
+    document.addEventListener('mousemove', (e) => {
+      if (effects.trails) {
+        createTrail(e.clientX, e.clientY);
+      }
+    });
+
+    // RIPPLE SHOCKWAVES
+    function createRipple(x, y) {
+      if (!effects.ripples) return;
+      
+      const ripple = document.createElement('div');
+      ripple.className = 'ripple-wave';
+      ripple.style.left = (x - 250) + 'px';
+      ripple.style.top = (y - 250) + 'px';
+      document.body.appendChild(ripple);
+      
+      setTimeout(() => ripple.remove(), 1000);
+    }
+
+    document.addEventListener('click', (e) => {
+      createRipple(e.clientX, e.clientY);
+    });
+
+    // Ripples on scroll
+    let lastScrollTime = 0;
+    window.addEventListener('scroll', () => {
+      const now = Date.now();
+      if (now - lastScrollTime > 200 && effects.ripples) {
+        createRipple(window.innerWidth / 2, window.innerHeight / 2);
+        lastScrollTime = now;
+      }
+    });
+
+    // MATRIX RAIN
+    function createMatrixRain() {
+      const container = document.getElementById('matrixRain');
+      if (!container) return;
+      
+      container.innerHTML = '';
+      if (!effects.matrix) return;
+      
+      const chars = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
+      const columnCount = Math.floor(window.innerWidth / 20);
+      
+      for (let i = 0; i < columnCount; i++) {
+        const column = document.createElement('div');
+        column.className = 'matrix-column';
+        column.style.left = (i * 20) + 'px';
+        column.style.animationDuration = (Math.random() * 3 + 2) + 's';
+        column.style.animationDelay = (Math.random() * 2) + 's';
+        
+        let text = '';
+        for (let j = 0; j < 30; j++) {
+          text += chars[Math.floor(Math.random() * chars.length)];
+        }
+        column.textContent = text;
+        
+        container.appendChild(column);
+      }
+    }
+
+    // FRACTALS
+    function createFractals() {
+      const container = document.getElementById('fractalBg');
+      if (!container) return;
+      
+      container.innerHTML = '';
+      if (!effects.fractals) return;
+      
+      for (let i = 0; i < 20; i++) {
+        const shape = document.createElement('div');
+        shape.className = 'fractal-shape';
+        const size = Math.random() * 100 + 50;
+        shape.style.width = size + 'px';
+        shape.style.height = size + 'px';
+        shape.style.left = Math.random() * 100 + '%';
+        shape.style.top = Math.random() * 100 + '%';
+        shape.style.animationDelay = (Math.random() * 5) + 's';
+        shape.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';
+        container.appendChild(shape);
+      }
+    }
+
+    // GALAXY PARTICLES
+    function createGalaxy() {
+      if (!effects.galaxy) {
+        document.querySelectorAll('.galaxy-particle').forEach(p => p.remove());
+        return;
+      }
+      
+      for (let i = 0; i < 50; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'galaxy-particle';
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.top = Math.random() * 100 + '%';
+        particle.style.animationDelay = (Math.random() * 2) + 's';
+        particle.style.animationDuration = (Math.random() * 2 + 1) + 's';
+        document.body.appendChild(particle);
+      }
+    }
+
+    // PARALLAX LAYERS
+    function createParallaxLayers() {
+      const container = document.getElementById('parallaxLayer');
+      if (!container) return;
+      
+      container.innerHTML = '';
+      
+      for (let i = 0; i < 5; i++) {
+        const shape = document.createElement('div');
+        shape.className = 'parallax-shape';
+        const size = Math.random() * 200 + 100;
+        shape.style.width = size + 'px';
+        shape.style.height = size + 'px';
+        shape.style.left = Math.random() * 100 + '%';
+        shape.style.top = Math.random() * 100 + '%';
+        shape.style.background = `radial-gradient(circle, ${i % 2 === 0 ? 'var(--neon-cyan)' : 'var(--neon-pink)'}, transparent)`;
+        shape.dataset.speed = (i + 1) * 0.5;
+        container.appendChild(shape);
+      }
+    }
+
+    // Parallax scroll effect
+    window.addEventListener('scroll', () => {
+      const shapes = document.querySelectorAll('.parallax-shape');
+      const scrolled = window.pageYOffset;
+      
+      shapes.forEach(shape => {
+        const speed = parseFloat(shape.dataset.speed);
+        shape.style.transform = `translateY(${scrolled * speed}px)`;
+      });
+    });
+
+    // Galaxy particles react to mouse
+    document.addEventListener('mousemove', (e) => {
+      if (!effects.galaxy) return;
+      
+      const particles = document.querySelectorAll('.galaxy-particle');
+      const mouseX = e.clientX;
+      const mouseY = e.clientY;
+      
+      particles.forEach(particle => {
+        const rect = particle.getBoundingClientRect();
+        const particleX = rect.left + rect.width / 2;
+        const particleY = rect.top + rect.height / 2;
+        
+        const dx = mouseX - particleX;
+        const dy = mouseY - particleY;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+        
+        if (distance < 150) {
+          const angle = Math.atan2(dy, dx);
+          const force = (150 - distance) / 150;
+          const moveX = -Math.cos(angle) * force * 20;
+          const moveY = -Math.sin(angle) * force * 20;
+          
+          particle.style.transform = `translate(${moveX}px, ${moveY}px)`;
+        } else {
+          particle.style.transform = 'translate(0, 0)';
+        }
+      });
+    });
+
+    // EFFECTS CONTROL PANEL
+    document.querySelectorAll('.effect-toggle').forEach(toggle => {
+      const effectName = toggle.dataset.effect;
+      const checkbox = toggle.querySelector('.effect-checkbox');
+      
+      // Set initial state
+      if (effects[effectName]) {
+        checkbox.classList.add('active');
+      }
+      
+      toggle.addEventListener('click', () => {
+        effects[effectName] = !effects[effectName];
+        localStorage.setItem(`effect-${effectName}`, effects[effectName]);
+        
+        checkbox.classList.toggle('active');
+        
+        // Apply effect changes
+        if (effectName === 'matrix') {
+          createMatrixRain();
+        } else if (effectName === 'fractals') {
+          createFractals();
+        } else if (effectName === 'galaxy') {
+          if (effects.galaxy) {
+            createGalaxy();
+          } else {
+            document.querySelectorAll('.galaxy-particle').forEach(p => p.remove());
+          }
+        } else if (effectName === 'aurora') {
+          const aurora = document.querySelector('.aurora-wave');
+          if (aurora) aurora.style.display = effects.aurora ? 'block' : 'none';
+        }
+        
+        // Visual feedback
+        createRipple(window.innerWidth / 2, window.innerHeight / 2);
+      });
+    });
+
+    // Initialize effects
+    createMatrixRain();
+    createFractals();
+    createGalaxy();
+    createParallaxLayers();
+
+    // Update aurora visibility
+    const aurora = document.querySelector('.aurora-wave');
+    if (aurora) aurora.style.display = effects.aurora ? 'block' : 'none';
+
     // THEME SWITCHER
     const themeButtons = document.querySelectorAll('.theme-btn');
     const body = document.body;
