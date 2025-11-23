@@ -3,11 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="About KMDynamics: Johannesburg-based digital marketing agency transforming ambitious SA brands into market leaders since 2020.">
-  <link rel="canonical" href="https://kmdynamics.co.za/about.html">
-  
-  <title>About | KMDynamics - The Empire Builders</title>
-  
+  <title>About | KMDynamics - Empire Builders</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -15,15 +11,26 @@
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
-  <div class="bg-gradient"></div>
   
+  <!-- Dynamic Background -->
+  <div class="bg-system">
+    <div class="gradient-orb orb-1"></div>
+    <div class="gradient-orb orb-2"></div>
+    <div class="gradient-orb orb-3"></div>
+    <div class="grid-lines"></div>
+  </div>
+  
+  <!-- Header -->
   <header class="header">
-    <a href="index.html" class="logo">KMDYNAMICS</a>
-    <button class="menu-btn" onclick="toggleMenu()" aria-label="Toggle navigation">
+    <a href="index.html" class="logo">
+      <span class="logo-text">KM</span><span class="logo-accent">DYNAMICS</span>
+    </a>
+    <button class="menu-btn" onclick="toggleMenu()" aria-label="Toggle navigation" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </header>
   
+  <!-- Mobile Navigation -->
   <nav class="mobile-nav" aria-label="Main navigation">
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
@@ -33,188 +40,309 @@
     <a href="contact.html">Contact</a>
   </nav>
 
+  <!-- Main Content -->
   <main id="main">
-    <div class="page-header">
-      <span class="tag">Our Story</span>
-      <h1 class="page-title text-gradient">The Empire Builders</h1>
-      <p class="page-desc">We're not just marketers. We're architects of brand domination based in Johannesburg, South Africa.</p>
-    </div>
+    <!-- Page Header -->
+    <section class="page-header">
+      <span class="tag tag-animated">Our Story</span>
+      <h1 class="page-title">
+        We Build <span class="text-gradient">Empires</span>
+      </h1>
+      <p class="page-desc">Born in Johannesburg. Built on results. We're not your average marketing agency—we're strategic warfare consultants disguised as marketers.</p>
+    </section>
 
-    <!-- Brand Story -->
+    <!-- Mission Section -->
     <section class="section">
-      <div class="card mb-6">
-        <h2 class="text-gradient-subtle mb-4">Why We Exist</h2>
-        <p class="text-muted mb-4">KMDynamics was founded with a single, obsessive goal: to transform ambitious South African brands into market leaders.</p>
-        <p class="text-muted mb-4">We saw too many incredible businesses with world-class products being held back by mediocre marketing. Great ideas dying in obscurity while inferior competitors dominated simply because they understood the game better.</p>
-        <p class="text-muted">We decided to change that. Not with incremental improvements, but with explosive, industry-shaking strategies that make competitors scramble to keep up.</p>
-      </div>
-
-      <div class="card">
-        <h2 class="text-gradient-subtle mb-4">What Makes Us Different</h2>
-        <p class="text-muted mb-4">Most agencies play it safe. They deliver "good enough" results and call it a day. We're not wired that way.</p>
-        <p class="text-muted mb-4">We're obsessed with domination—with making our clients the undisputed leaders in their space. Every campaign we launch, every piece of content we create, every strategy we develop is designed to crush the competition.</p>
-        <p class="text-muted"><strong class="text-primary">We only win when you win.</strong> That's not marketing speak. That's how we've structured our entire business.</p>
+      <div class="card-gradient" style="max-width: 900px; margin: 0 auto; padding: var(--space-12) var(--space-6); text-align: center;">
+        <h2 style="font-size: var(--font-size-3xl); margin-bottom: var(--space-5);">
+          Our <span class="text-gradient">Mission</span>
+        </h2>
+        <p style="font-size: var(--font-size-lg); line-height: 1.8; color: var(--color-text-muted); margin-bottom: var(--space-6);">
+          To transform ambitious brands into unstoppable market forces. We don't do "awareness campaigns" or "brand building exercises." We deploy strategic weapons that generate measurable revenue and crush competition.
+        </p>
+        <p style="font-size: var(--font-size-lg); line-height: 1.8; color: var(--color-text-muted);">
+          Every campaign is engineered for ROI. Every post is designed to convert. Every ad is optimized for profit. That's not marketing—that's <strong style="color: var(--color-primary);">warfare</strong>.
+        </p>
       </div>
     </section>
 
-    <!-- Values & Guarantees -->
+    <!-- Values Section -->
     <section class="section">
-      <div class="text-center mb-8">
-        <span class="tag">Our Values</span>
-        <h2 class="section-title text-gradient-subtle">What We Stand For</h2>
+      <div class="section-header">
+        <span class="tag tag-animated">What Drives Us</span>
+        <h2 class="section-title">
+          Our <span class="text-gradient">Values</span>
+        </h2>
+        <p class="section-desc">The principles that guide every campaign, every strategy, every decision.</p>
       </div>
-
+      
       <div class="values-grid">
         <div class="value-card">
-          <span class="value-icon">🔥</span>
-          <h3>Relentless</h3>
-          <p>We don't stop until we've achieved extraordinary results. Mediocrity isn't in our vocabulary.</p>
+          <div class="value-icon">🎯</div>
+          <h4 style="margin-bottom: var(--space-3); color: var(--color-primary);">Results Over Everything</h4>
+          <p style="font-size: var(--font-size-sm); color: var(--color-text-muted); line-height: 1.7;">We don't get paid to look busy. We get paid to deliver ROI. If it doesn't generate revenue or growth, we don't do it.</p>
         </div>
+        
         <div class="value-card">
-          <span class="value-icon">🎯</span>
-          <h3>Strategic</h3>
-          <p>Every move is calculated for maximum impact. We don't guess—we analyze, plan, and execute.</p>
+          <div class="value-icon">⚡</div>
+          <h4 style="margin-bottom: var(--space-3); color: var(--color-primary);">Speed & Execution</h4>
+          <p style="font-size: var(--font-size-sm); color: var(--color-text-muted); line-height: 1.7;">While competitors waste weeks planning, we're already testing, optimizing, and scaling. Speed wins markets.</p>
         </div>
+        
         <div class="value-card">
-          <span class="value-icon">💡</span>
-          <h3>Innovative</h3>
-          <p>We stay ahead of trends and create new playbooks that others copy. First-mover advantage, always.</p>
+          <div class="value-icon">🔥</div>
+          <h4 style="margin-bottom: var(--space-3); color: var(--color-primary);">Radical Transparency</h4>
+          <p style="font-size: var(--font-size-sm); color: var(--color-text-muted); line-height: 1.7;">Full access to dashboards, analytics, and spending. No smoke and mirrors. You see everything we see.</p>
         </div>
+        
         <div class="value-card">
-          <span class="value-icon">🤝</span>
-          <h3>Partnership</h3>
-          <p>Your success is our success. We're invested in your growth as if it were our own business.</p>
+          <div class="value-icon">💡</div>
+          <h4 style="margin-bottom: var(--space-3); color: var(--color-primary);">Innovation Always</h4>
+          <p style="font-size: var(--font-size-sm); color: var(--color-text-muted); line-height: 1.7;">We don't recycle last year's strategies. We stay ahead of trends, algorithms, and competition. Always.</p>
         </div>
       </div>
     </section>
 
-    <!-- Guarantees -->
-    <section class="section section-sm">
-      <div class="card card-gradient">
-        <h2 class="text-gradient-subtle text-center mb-6">Our Guarantees</h2>
-        <div class="feature-list">
-          <li><strong>Transparent Pricing</strong> — No hidden fees, ever. You know exactly what you're paying for.</li>
-          <li><strong>On-Time Delivery</strong> — Deadlines are sacred. We deliver when we say we will.</li>
-          <li><strong>Direct Communication</strong> — No account managers playing telephone. Talk directly to the people doing the work.</li>
-          <li><strong>Results-Focused</strong> — We track everything. If something isn't working, we pivot fast.</li>
-          <li><strong>No Lock-In Contracts</strong> — We earn your business every month. Cancel anytime with 30 days notice.</li>
+    <!-- Story Section -->
+    <section class="section">
+      <div style="max-width: 800px; margin: 0 auto;">
+        <div class="section-header">
+          <span class="tag tag-animated">Origin Story</span>
+          <h2 class="section-title">
+            How We <span class="text-gradient">Started</span>
+          </h2>
+        </div>
+        
+        <div class="card" style="padding: var(--space-8); margin-bottom: var(--space-6);">
+          <p style="font-size: var(--font-size-base); line-height: 1.8; color: var(--color-text-muted); margin-bottom: var(--space-5);">
+            KMDynamics was born from frustration. We watched too many incredible South African brands struggle because they were getting scammed by agencies charging R50k/month for 3 generic posts and zero results.
+          </p>
+          <p style="font-size: var(--font-size-base); line-height: 1.8; color: var(--color-text-muted); margin-bottom: var(--space-5);">
+            So we built something different. An agency that treats every rand like it's our own. That obsesses over metrics. That builds actual systems for growth instead of just "creating awareness."
+          </p>
+          <p style="font-size: var(--font-size-base); line-height: 1.8; color: var(--color-text-muted);">
+            Today, we've helped 47+ brands scale from local players to market leaders. We've generated R87M+ in revenue for our clients. And we're just getting started.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section">
+      <div class="section-header">
+        <span class="tag tag-animated">The Warriors</span>
+        <h2 class="section-title">
+          Meet The <span class="text-gradient">Team</span>
+        </h2>
+        <p class="section-desc">The strategists, creators, and executors behind every campaign.</p>
+      </div>
+      
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-avatar">K</div>
+          <h3 style="font-size: var(--font-size-xl); margin-bottom: var(--space-2); color: var(--color-primary);">Kgomotso Maake</h3>
+          <span class="role">Co-Founder & Chief Strategist</span>
+          <p style="font-size: var(--font-size-sm); color: var(--color-text-muted); line-height: 1.7; margin-top: var(--space-4);">
+            The mastermind behind every campaign strategy. Former agency director who got tired of playing it safe. Now builds empires instead.
+          </p>
+        </div>
+        
+        <div class="team-card">
+          <div class="team-avatar">M</div>
+          <h3 style="font-size: var(--font-size-xl); margin-bottom: var(--space-2); color: var(--color-primary);">Mpho Dlamini</h3>
+          <span class="role">Co-Founder & Creative Director</span>
+          <p style="font-size: var(--font-size-sm); color: var(--color-text-muted); line-height: 1.7; margin-top: var(--space-4);">
+            The creative force who makes brands unforgettable. Specializes in viral content and turning scrollers into buyers.
+          </p>
+        </div>
+      </div>
+      
+      <div style="text-align: center; margin-top: var(--space-8);">
+        <p style="font-size: var(--font-size-base); color: var(--color-text-muted); margin-bottom: var(--space-5);">
+          Plus a network of elite specialists: videographers, copywriters, designers, and paid ads experts who execute with military precision.
+        </p>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="section">
+      <div class="section-header">
+        <span class="tag tag-animated">The Difference</span>
+        <h2 class="section-title">
+          Why <span class="text-gradient">KMDynamics</span>?
+        </h2>
+      </div>
+      
+      <div style="max-width: 900px; margin: 0 auto;">
+        <div class="process-steps">
+          <div class="process-step">
+            <div class="step-number">💎</div>
+            <div class="step-content">
+              <h4>We're Owner-Operated</h4>
+              <p>You work directly with the founders—not interns or junior account managers. Your success is our obsession.</p>
+            </div>
+          </div>
+          
+          <div class="process-step">
+            <div class="step-number">📊</div>
+            <div class="step-content">
+              <h4>Data-Driven Everything</h4>
+              <p>Every decision backed by analytics. We test, measure, optimize, and scale what works. No guesswork.</p>
+            </div>
+          </div>
+          
+          <div class="process-step">
+            <div class="step-number">⚡</div>
+            <div class="step-content">
+              <h4>Speed Matters</h4>
+              <p>24-hour response time. Fast execution. Quick pivots. We move at the speed of opportunity.</p>
+            </div>
+          </div>
+          
+          <div class="process-step">
+            <div class="step-number">🎯</div>
+            <div class="step-content">
+              <h4>ROI-Obsessed</h4>
+              <p>We track every rand spent and revenue generated. Our success is measured by your bank account growth.</p>
+            </div>
+          </div>
+          
+          <div class="process-step">
+            <div class="step-number">🚀</div>
+            <div class="step-content">
+              <h4>No Lock-In Contracts</h4>
+              <p>Month-to-month engagement. We earn your business every 30 days through results, not contracts.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Stats -->
     <section class="section">
+      <div class="section-header">
+        <span class="tag tag-animated">Track Record</span>
+        <h2 class="section-title">
+          Numbers That <span class="text-gradient">Matter</span>
+        </h2>
+      </div>
+      
       <div class="stats-grid">
         <div class="stat-card">
           <div class="stat-number">47+</div>
           <div class="stat-label">Brands Scaled</div>
         </div>
         <div class="stat-card">
-          <div class="stat-number">387%</div>
-          <div class="stat-label">Avg ROI</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number">2.5M+</div>
-          <div class="stat-label">Reach</div>
+          <div class="stat-number">R87M+</div>
+          <div class="stat-label">Revenue Generated</div>
         </div>
         <div class="stat-card">
           <div class="stat-number">98%</div>
-          <div class="stat-label">Retention</div>
+          <div class="stat-label">Client Retention</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">387%</div>
+          <div class="stat-label">Average ROI</div>
         </div>
       </div>
     </section>
 
-    <!-- Team -->
-    <section class="section">
-      <div class="text-center mb-8">
-        <span class="tag">Leadership</span>
-        <h2 class="section-title text-gradient-subtle">Meet The Team</h2>
-      </div>
-
-      <div class="team-grid">
-        <div class="team-card">
-          <div class="team-avatar">K</div>
-          <h3>Kagiso Mokoena</h3>
-          <p class="role">Founder & CEO</p>
-          <p>Visionary strategist with 8+ years transforming brands into market leaders across Africa. Previously led digital at top Joburg agencies before founding KMDynamics.</p>
-          <a href="#" class="btn btn-ghost mt-4" aria-label="Kagiso's LinkedIn">LinkedIn →</a>
-        </div>
-        <div class="team-card">
-          <div class="team-avatar">M</div>
-          <h3>Mandisa Dlamini</h3>
-          <p class="role">Creative Director</p>
-          <p>Award-winning creative mind behind viral campaigns that capture attention and drive results. Specializes in visual storytelling that converts.</p>
-          <a href="#" class="btn btn-ghost mt-4" aria-label="Mandisa's LinkedIn">LinkedIn →</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Careers -->
-    <section class="section">
-      <div class="card text-center">
-        <h2 class="text-gradient-subtle mb-4">Join The Empire</h2>
-        <p class="text-muted mb-6">We're always looking for talented, hungry individuals who want to do the best work of their careers. If you're passionate about marketing and hate mediocrity, we want to hear from you.</p>
-        <a href="contact.html?subject=careers" class="btn btn-secondary">View Open Positions</a>
-      </div>
-    </section>
-
-    <!-- CTA -->
+    <!-- CTA Section -->
     <section class="section">
       <div class="cta-box">
-        <h2 class="text-gradient-subtle">Ready To Build Your Empire?</h2>
-        <p>Join the brands that have achieved extraordinary growth with KMDynamics.</p>
-        <a href="contact.html" class="btn btn-primary btn-lg">Let's Talk</a>
+        <h2>Ready To Build Your <span class="text-gradient">Empire</span>?</h2>
+        <p>Let's turn your brand into a force your competitors can't ignore. Book a free strategy call and see how we'd dominate your market.</p>
+        <div style="display: flex; flex-direction: column; gap: var(--space-4); align-items: center; margin-top: var(--space-6);">
+          <a href="contact.html" class="btn btn-primary btn-glow">
+            <span>Book Strategy Call</span>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M4 10h12m-6-6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="portfolio.html" class="btn btn-ghost">See Our Work →</a>
+        </div>
       </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="footer">
-    <div class="footer-logo">KMDYNAMICS</div>
-    <p class="footer-desc">We don't build brands. We build empires.</p>
-    <nav class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <div class="social-links">
-      <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
-      <a href="#" class="social-link" aria-label="LinkedIn">in</a>
-      <a href="#" class="social-link" aria-label="Facebook">fb</a>
-      <a href="#" class="social-link" aria-label="Instagram">ig</a>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <span class="logo-text">KM</span><span class="logo-accent">DYNAMICS</span>
+        </div>
+        <p class="footer-tagline">We don't build brands. We build empires.</p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
+          <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+          <a href="#" class="social-link" aria-label="Facebook">fb</a>
+          <a href="#" class="social-link" aria-label="Instagram">ig</a>
+        </div>
+      </div>
+      
+      <nav class="footer-nav">
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="services.html#social">Social Media</a>
+          <a href="services.html#ads">Paid Ads</a>
+          <a href="services.html#brand">Branding</a>
+          <a href="services.html#content">Content</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="about.html">About Us</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="mailto:kmdynamics1@gmail.com">kmdynamics1@gmail.com</a>
+          <span>Johannesburg, SA</span>
+          <span>Response in 24hrs</span>
+        </div>
+      </nav>
     </div>
-    <p class="copyright">© 2025 KMDynamics. Johannesburg, South Africa</p>
+    
+    <div class="footer-bottom">
+      <p class="copyright">© 2025 KMDynamics. Johannesburg, South Africa</p>
+    </div>
   </footer>
 
   <script>
+    // Mobile Menu Toggle
     function toggleMenu() {
-      document.querySelector('.menu-btn').classList.toggle('active');
-      document.querySelector('.mobile-nav').classList.toggle('active');
-      document.body.style.overflow = document.querySelector('.mobile-nav').classList.contains('active') ? 'hidden' : '';
+      const btn = document.querySelector('.menu-btn');
+      const nav = document.querySelector('.mobile-nav');
+      const isOpen = btn.classList.toggle('active');
+      nav.classList.toggle('active');
+      btn.setAttribute('aria-expanded', isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
     }
 
+    // Close menu on link click
     document.querySelectorAll('.mobile-nav a').forEach(link => {
       link.addEventListener('click', () => {
         document.querySelector('.menu-btn').classList.remove('active');
         document.querySelector('.mobile-nav').classList.remove('active');
+        document.querySelector('.menu-btn').setAttribute('aria-expanded', 'false');
         document.body.style.overflow = '';
       });
     });
-  </script>
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "AboutPage",
-    "mainEntity": {
-      "@type": "Organization",
-      "name": "KMDynamics",
-      "foundingDate": "2020",
-      "foundingLocation": "Johannesburg, South Africa",
-      "description": "Digital marketing agency transforming ambitious SA brands into market leaders"
-    }
-  }
+    // Intersection Observer for animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-in');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -100px 0px' });
+
+    document.querySelectorAll('.value-card, .team-card, .process-step, .stat-card').forEach(el => {
+      observer.observe(el);
+    });
   </script>
 </body>
 </html>
