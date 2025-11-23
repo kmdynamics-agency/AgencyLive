@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-   <title>Services | KMDynamics - Digital Marketing Arsenal</title>
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | KMDynamics - Marketing Warfare Arsenal</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -11,15 +11,26 @@
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
-  <div class="bg-gradient"></div>
   
+  <!-- Dynamic Background -->
+  <div class="bg-system">
+    <div class="gradient-orb orb-1"></div>
+    <div class="gradient-orb orb-2"></div>
+    <div class="gradient-orb orb-3"></div>
+    <div class="grid-lines"></div>
+  </div>
+  
+  <!-- Header -->
   <header class="header">
-    <a href="index.html" class="logo">KMDYNAMICS</a>
-    <button class="menu-btn" onclick="toggleMenu()" aria-label="Toggle navigation">
+    <a href="index.html" class="logo">
+      <span class="logo-text">KM</span><span class="logo-accent">DYNAMICS</span>
+    </a>
+    <button class="menu-btn" onclick="toggleMenu()" aria-label="Toggle navigation" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </header>
   
+  <!-- Mobile Navigation -->
   <nav class="mobile-nav" aria-label="Main navigation">
     <a href="index.html">Home</a>
     <a href="services.html" class="active">Services</a>
@@ -29,267 +40,324 @@
     <a href="contact.html">Contact</a>
   </nav>
 
+  <!-- Main Content -->
   <main id="main">
     <!-- Page Header -->
-    <div class="page-header">
-      <span class="tag">Our Arsenal</span>
-      <h1 class="page-title text-gradient">Services That Destroy Competition</h1>
-      <p class="page-desc">Strategic weapons designed to obliterate your competition and catapult your brand to industry leadership.</p>
-    </div>
-
-    <!-- Service Philosophy -->
-    <section class="section section-sm">
-      <div class="card card-gradient text-center">
-        <h2 class="text-gradient-subtle mb-4">Our Philosophy</h2>
-        <p class="text-muted">We don't do "good enough." Every strategy, every campaign, every piece of content is engineered for maximum impact. We're obsessed with results because your success is our success.</p>
-      </div>
+    <section class="page-header">
+      <span class="tag tag-animated">Our Arsenal</span>
+      <h1 class="page-title">
+        Services That <span class="text-gradient">Dominate</span>
+      </h1>
+      <p class="page-desc">We don't do "marketing." We deploy strategic weapons designed to annihilate competition and turn your brand into an unstoppable force.</p>
     </section>
 
-    <!-- All Services -->
+    <!-- Services Section -->
     <section class="section">
       <div class="services-grid">
-        <article class="service-card">
+        <!-- Social Media Warfare -->
+        <article id="social" class="service-card">
           <span class="service-icon">🚀</span>
           <h3>Social Media Warfare</h3>
-          <p>Multi-platform dominance strategies that turn casual scrollers into obsessed customers.</p>
+          <p>Multi-platform domination that transforms casual scrollers into obsessed customers. We don't just post—we conquer feeds, algorithms, and minds.</p>
+          
           <ul class="feature-list">
-            <li>Platform-specific content strategy</li>
-            <li>Community management & engagement</li>
-            <li>Growth hacking tactics</li>
-            <li>Analytics & performance reporting</li>
-            <li>Competitor monitoring</li>
+            <li>Instagram, TikTok, Facebook, Twitter/X mastery</li>
+            <li>Algorithm-beating content strategies</li>
+            <li>Daily engagement and community building</li>
+            <li>Viral content engineering</li>
+            <li>Hashtag and trend exploitation</li>
+            <li>Influencer collaboration management</li>
+            <li>Analytics and performance optimization</li>
           </ul>
-          <p class="text-muted"><strong class="text-primary">Best for:</strong> Brands wanting to build loyal communities</p>
-          <a href="contact.html?service=social" class="btn btn-primary btn-block mt-4">Get Started</a>
+          
+          <div class="card mt-6">
+            <strong style="color: var(--color-primary);">Result:</strong>
+            <p style="font-size: var(--font-size-sm); margin-top: var(--space-2);">Average 250% follower growth and 400% engagement increase in 90 days. Your brand becomes impossible to scroll past.</p>
+          </div>
         </article>
 
-        <article class="service-card">
+        <!-- Paid Ads Artillery -->
+        <article id="ads" class="service-card">
           <span class="service-icon">💰</span>
           <h3>Paid Ads Artillery</h3>
-          <p>Precision-targeted campaigns with military efficiency. Every rand returns 5-10x.</p>
+          <p>Precision-targeted campaigns that turn every rand into a profit machine. We master Facebook, Google, and TikTok ads to deliver ROI that makes accountants weep with joy.</p>
+          
           <ul class="feature-list">
-            <li>Facebook & Instagram Ads</li>
-            <li>Google Ads & YouTube</li>
-            <li>Retargeting campaigns</li>
-            <li>A/B testing & optimization</li>
-            <li>Conversion tracking setup</li>
+            <li>Facebook & Instagram ads mastery</li>
+            <li>Google Ads (Search, Display, Shopping)</li>
+            <li>TikTok ads for viral reach</li>
+            <li>LinkedIn B2B targeting</li>
+            <li>Retargeting and remarketing campaigns</li>
+            <li>A/B testing and optimization</li>
+            <li>Landing page conversion optimization</li>
           </ul>
-          <p class="text-muted"><strong class="text-primary">Best for:</strong> Brands ready to scale fast</p>
-          <a href="contact.html?service=ads" class="btn btn-primary btn-block mt-4">Launch Campaign</a>
+          
+          <div class="card mt-6">
+            <strong style="color: var(--color-primary);">Result:</strong>
+            <p style="font-size: var(--font-size-sm); margin-top: var(--space-2);">Average 5-10x ROAS. We turn R10,000 ad spend into R50,000-R100,000 in revenue. Consistently.</p>
+          </div>
         </article>
 
-        <article class="service-card">
+        <!-- Brand Architecture -->
+        <article id="brand" class="service-card">
           <span class="service-icon">🎨</span>
           <h3>Brand Architecture</h3>
-          <p>Visual identities so powerful they burn into memory and build lasting loyalty.</p>
+          <p>Visual identities so powerful they burn into memory and build unshakeable loyalty. We create brands that customers tattoo on their bodies (literally happened).</p>
+          
           <ul class="feature-list">
-            <li>Logo & visual identity design</li>
-            <li>Brand guidelines & style guide</li>
-            <li>Brand voice development</li>
-            <li>Collateral & print design</li>
+            <li>Complete brand identity design</li>
+            <li>Logo design and brand guidelines</li>
+            <li>Color psychology and typography</li>
+            <li>Packaging and product design</li>
+            <li>Brand voice and messaging</li>
+            <li>Visual content systems</li>
             <li>Brand positioning strategy</li>
           </ul>
-          <p class="text-muted"><strong class="text-primary">Best for:</strong> New brands or complete rebrands</p>
-          <a href="contact.html?service=brand" class="btn btn-primary btn-block mt-4">Build Brand</a>
+          
+          <div class="card mt-6">
+            <strong style="color: var(--color-primary);">Result:</strong>
+            <p style="font-size: var(--font-size-sm); margin-top: var(--space-2);">Brands that command 3x higher prices and create cult-like followings. Premium positioning that justifies premium pricing.</p>
+          </div>
         </article>
 
-        <article class="service-card">
-          <span class="service-icon">📊</span>
-          <h3>SEO Domination</h3>
-          <p>Page one isn't good enough. Position one. We optimize to own search results.</p>
-          <ul class="feature-list">
-            <li>Keyword research & strategy</li>
-            <li>On-page optimization</li>
-            <li>Technical SEO audits</li>
-            <li>Link building campaigns</li>
-            <li>Local SEO for SA businesses</li>
-          </ul>
-          <p class="text-muted"><strong class="text-primary">Best for:</strong> Brands wanting organic growth</p>
-          <a href="contact.html?service=seo" class="btn btn-primary btn-block mt-4">Rank Higher</a>
-        </article>
-
-        <article class="service-card">
+        <!-- Influencer Arsenal -->
+        <article id="influencer" class="service-card">
           <span class="service-icon">🌟</span>
           <h3>Influencer Arsenal</h3>
-          <p>Strategic partnerships with voices that actually move markets and drive sales.</p>
+          <p>Strategic partnerships with voices that move markets and drive sales at scale. We connect you with influencers who actually convert, not just inflate vanity metrics.</p>
+          
           <ul class="feature-list">
-            <li>Influencer identification & vetting</li>
-            <li>Campaign strategy & management</li>
-            <li>Content collaboration</li>
-            <li>Performance tracking</li>
-            <li>Long-term partnership building</li>
+            <li>Micro to macro influencer partnerships</li>
+            <li>Campaign strategy and execution</li>
+            <li>Contract negotiation and management</li>
+            <li>Content approval and quality control</li>
+            <li>Performance tracking and ROI analysis</li>
+            <li>Long-term ambassador programs</li>
+            <li>Crisis management and reputation protection</li>
           </ul>
-          <p class="text-muted"><strong class="text-primary">Best for:</strong> Brands targeting Gen Z & millennials</p>
-          <a href="contact.html?service=influencer" class="btn btn-primary btn-block mt-4">Activate Network</a>
+          
+          <div class="card mt-6">
+            <strong style="color: var(--color-primary);">Result:</strong>
+            <p style="font-size: var(--font-size-sm); margin-top: var(--space-2);">Campaigns generating millions in reach and actual sales. We've driven 6-figure launches from single influencer partnerships.</p>
+          </div>
         </article>
 
-        <article class="service-card">
+        <!-- Viral Content Engine -->
+        <article id="content" class="service-card">
           <span class="service-icon">📈</span>
           <h3>Viral Content Engine</h3>
-          <p>Algorithm-optimized content that spreads like wildfire and converts at scale.</p>
+          <p>Algorithm-optimized content that spreads like wildfire and converts viewers into customers. Every piece is engineered for maximum engagement and shareability.</p>
+          
           <ul class="feature-list">
-            <li>Trend analysis & newsjacking</li>
-            <li>Video production & editing</li>
-            <li>Graphic design & motion</li>
-            <li>Content calendar planning</li>
-            <li>Platform-specific optimization</li>
+            <li>Short-form video production (Reels, TikToks, Shorts)</li>
+            <li>Professional photography and editing</li>
+            <li>Copywriting that converts</li>
+            <li>Meme marketing and trend-jacking</li>
+            <li>User-generated content strategies</li>
+            <li>Content calendars and scheduling</li>
+            <li>Cross-platform content adaptation</li>
           </ul>
-          <p class="text-muted"><strong class="text-primary">Best for:</strong> Brands wanting explosive reach</p>
-          <a href="contact.html?service=content" class="btn btn-primary btn-block mt-4">Go Viral</a>
+          
+          <div class="card mt-6">
+            <strong style="color: var(--color-primary);">Result:</strong>
+            <p style="font-size: var(--font-size-sm); margin-top: var(--space-2);">Regular viral hits (1M+ views) that drive thousands in sales. Content so good, competitors steal it (we've seen it happen).</p>
+          </div>
+        </article>
+
+        <!-- Growth Strategy -->
+        <article id="growth" class="service-card">
+          <span class="service-icon">⚡</span>
+          <h3>Growth Strategy</h3>
+          <p>Data-driven roadmaps that scale brands from local players to market leaders. We map the entire journey from where you are to total market domination.</p>
+          
+          <ul class="feature-list">
+            <li>Comprehensive marketing audits</li>
+            <li>Competitor analysis and positioning</li>
+            <li>Customer journey mapping</li>
+            <li>Growth hacking and experimentation</li>
+            <li>Email and SMS marketing automation</li>
+            <li>Conversion rate optimization</li>
+            <li>KPI tracking and reporting</li>
+          </ul>
+          
+          <div class="card mt-6">
+            <strong style="color: var(--color-primary);">Result:</strong>
+            <p style="font-size: var(--font-size-sm); margin-top: var(--space-2);">Predictable, scalable growth systems. Clients typically see 200-500% revenue growth within 12 months of implementation.</p>
+          </div>
         </article>
       </div>
     </section>
 
-    <!-- Process -->
+    <!-- Process Section -->
     <section class="section">
-      <div class="text-center mb-8">
-        <span class="tag">Our Process</span>
-        <h2 class="section-title text-gradient-subtle">How We Deliver Results</h2>
-        <p class="section-desc">A proven 5-step process that consistently delivers exceptional outcomes.</p>
+      <div class="section-header">
+        <span class="tag tag-animated">Battle Plan</span>
+        <h2 class="section-title">
+          How We <span class="text-gradient">Dominate</span>
+        </h2>
+        <p class="section-desc">Our proven 4-phase system that transforms brands into empires.</p>
       </div>
       
       <div class="process-steps">
         <div class="process-step">
           <div class="step-number">1</div>
           <div class="step-content">
-            <h4>Discovery</h4>
-            <p>We dive deep into your brand, goals, audience, and competition to understand what makes you unique.</p>
+            <h4>Discovery & Intelligence</h4>
+            <p>Deep dive into your brand, audience, and competition. We analyze every angle, identify weaknesses in your market, and find opportunities your competitors are too blind to see.</p>
           </div>
         </div>
+        
         <div class="process-step">
           <div class="step-number">2</div>
           <div class="step-content">
-            <h4>Strategy</h4>
-            <p>Custom battle plan designed specifically for your brand with clear KPIs and milestones.</p>
+            <h4>Strategy & Weaponization</h4>
+            <p>We build your custom marketing arsenal—choosing the exact tactics, platforms, and messages that will crush your goals. No cookie-cutter bullshit. Pure strategic warfare.</p>
           </div>
         </div>
+        
         <div class="process-step">
           <div class="step-number">3</div>
           <div class="step-content">
-            <h4>Create</h4>
-            <p>Our team produces scroll-stopping content and campaigns that demand attention.</p>
+            <h4>Execution & Domination</h4>
+            <p>Full deployment. We launch campaigns, create content, run ads, and manage everything while you focus on running your business. This is where magic happens.</p>
           </div>
         </div>
+        
         <div class="process-step">
           <div class="step-number">4</div>
           <div class="step-content">
-            <h4>Launch</h4>
-            <p>Deploy campaigns with precision timing and continuous monitoring for optimal performance.</p>
-          </div>
-        </div>
-        <div class="process-step">
-          <div class="step-number">5</div>
-          <div class="step-content">
-            <h4>Optimize</h4>
-            <p>Data-driven refinement to scale what works and maximize your ROI continuously.</p>
+            <h4>Optimization & Scaling</h4>
+            <p>Continuous improvement through data analysis. We double down on what works, kill what doesn't, and scale winners until you're untouchable in your market.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- FAQ -->
+    <!-- Stats Section -->
     <section class="section">
-      <div class="text-center mb-8">
-        <span class="tag">FAQ</span>
-        <h2 class="section-title text-gradient-subtle">Common Questions</h2>
+      <div class="section-header">
+        <span class="tag tag-animated">By The Numbers</span>
+        <h2 class="section-title">
+          Results That <span class="text-gradient">Speak</span>
+        </h2>
       </div>
       
-      <div class="faq-item">
-        <div class="faq-question">How long until I see results?</div>
-        <div class="faq-answer">Most clients see initial results within 30 days. Significant growth typically happens within 90 days. We set realistic expectations based on your specific goals and starting point.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-question">Do you work with small businesses?</div>
-        <div class="faq-answer">Absolutely! Our Starter package is designed specifically for emerging brands. We've helped businesses of all sizes achieve remarkable growth.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-question">What industries do you specialize in?</div>
-        <div class="faq-answer">We've worked across fashion, fitness, beauty, tech, F&B, and professional services. Our strategies are adaptable to any industry that wants to dominate.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-question">Can I choose specific services?</div>
-        <div class="faq-answer">Yes! While our packages bundle popular services, we also offer custom solutions tailored to your specific needs. Contact us to discuss.</div>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number">2.5M+</div>
+          <div class="stat-label">Total Reach Generated</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">387%</div>
+          <div class="stat-label">Average ROI</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">47+</div>
+          <div class="stat-label">Brands Scaled</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">98%</div>
+          <div class="stat-label">Client Retention</div>
+        </div>
       </div>
     </section>
 
-    <!-- CTA -->
+    <!-- CTA Section -->
     <section class="section">
       <div class="cta-box">
-        <h2 class="text-gradient-subtle">Ready To Deploy Your Arsenal?</h2>
-        <p>Let's create a custom strategy that crushes your competition.</p>
-        <div style="display:flex;flex-direction:column;gap:var(--space-4);align-items:center;">
-          <a href="contact.html" class="btn btn-primary btn-lg">Start Now</a>
-          <a href="pricing.html" class="btn btn-ghost">View Pricing →</a>
+        <h2>Ready To <span class="text-gradient">Weaponize</span> Your Marketing?</h2>
+        <p>Stop throwing money at marketing that doesn't work. Let's build a system that makes your competitors irrelevant.</p>
+        <div style="display: flex; flex-direction: column; gap: var(--space-4); align-items: center; margin-top: var(--space-6);">
+          <a href="contact.html" class="btn btn-primary btn-glow">
+            <span>Book Strategy Call</span>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M4 10h12m-6-6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="pricing.html" class="btn btn-ghost">View Pricing Plans →</a>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="footer">
-    <div class="footer-logo">KMDYNAMICS</div>
-    <p class="footer-desc">We don't build brands. We build empires.</p>
-    <nav class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <div class="social-links">
-      <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
-      <a href="#" class="social-link" aria-label="LinkedIn">in</a>
-      <a href="#" class="social-link" aria-label="Facebook">fb</a>
-      <a href="#" class="social-link" aria-label="Instagram">ig</a>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <span class="logo-text">KM</span><span class="logo-accent">DYNAMICS</span>
+        </div>
+        <p class="footer-tagline">We don't build brands. We build empires.</p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
+          <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+          <a href="#" class="social-link" aria-label="Facebook">fb</a>
+          <a href="#" class="social-link" aria-label="Instagram">ig</a>
+        </div>
+      </div>
+      
+      <nav class="footer-nav">
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="services.html#social">Social Media</a>
+          <a href="services.html#ads">Paid Ads</a>
+          <a href="services.html#brand">Branding</a>
+          <a href="services.html#content">Content</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="about.html">About Us</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="mailto:kmdynamics1@gmail.com">kmdynamics1@gmail.com</a>
+          <span>Johannesburg, SA</span>
+          <span>Response in 24hrs</span>
+        </div>
+      </nav>
     </div>
-    <p class="copyright">© 2025 KMDynamics. Johannesburg, South Africa</p>
+    
+    <div class="footer-bottom">
+      <p class="copyright">© 2025 KMDynamics. Johannesburg, South Africa</p>
+    </div>
   </footer>
 
   <script>
+    // Mobile Menu Toggle
     function toggleMenu() {
       const btn = document.querySelector('.menu-btn');
       const nav = document.querySelector('.mobile-nav');
-      btn.classList.toggle('active');
+      const isOpen = btn.classList.toggle('active');
       nav.classList.toggle('active');
-      document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
+      btn.setAttribute('aria-expanded', isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
     }
 
+    // Close menu on link click
     document.querySelectorAll('.mobile-nav a').forEach(link => {
       link.addEventListener('click', () => {
         document.querySelector('.menu-btn').classList.remove('active');
         document.querySelector('.mobile-nav').classList.remove('active');
+        document.querySelector('.menu-btn').setAttribute('aria-expanded', 'false');
         document.body.style.overflow = '';
       });
     });
 
-    // FAQ Accordion
-    document.querySelectorAll('.faq-question').forEach(q => {
-      q.addEventListener('click', () => {
-        q.parentElement.classList.toggle('active');
+    // Intersection Observer for animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-in');
+        }
       });
-    });
-  </script>
+    }, { threshold: 0.1, rootMargin: '0px 0px -100px 0px' });
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "serviceType": "Digital Marketing",
-    "provider": {
-      "@type": "Organization",
-      "name": "KMDynamics"
-    },
-    "areaServed": "South Africa",
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Marketing Services",
-      "itemListElement": [
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Social Media Marketing"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Paid Advertising"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Brand Strategy"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "SEO Services"}}
-      ]
-    }
-  }
+    document.querySelectorAll('.service-card, .process-step, .stat-card').forEach(el => {
+      observer.observe(el);
+    });
   </script>
 </body>
 </html>
