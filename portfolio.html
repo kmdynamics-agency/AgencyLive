@@ -3,11 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="KMDynamics portfolio: Real case studies showing 300-500% growth for SA brands in fashion, fitness, beauty & tech industries.">
-  <link rel="canonical" href="https://kmdynamics.co.za/portfolio.html">
-  
-  <title>Portfolio | KMDynamics - Case Studies & Results</title>
-  
+  <title>Portfolio | KMDynamics - Battle-Tested Results</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -15,15 +11,26 @@
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
-  <div class="bg-gradient"></div>
   
+  <!-- Dynamic Background -->
+  <div class="bg-system">
+    <div class="gradient-orb orb-1"></div>
+    <div class="gradient-orb orb-2"></div>
+    <div class="gradient-orb orb-3"></div>
+    <div class="grid-lines"></div>
+  </div>
+  
+  <!-- Header -->
   <header class="header">
-    <a href="index.html" class="logo">KMDYNAMICS</a>
-    <button class="menu-btn" onclick="toggleMenu()" aria-label="Toggle navigation">
+    <a href="index.html" class="logo">
+      <span class="logo-text">KM</span><span class="logo-accent">DYNAMICS</span>
+    </a>
+    <button class="menu-btn" onclick="toggleMenu()" aria-label="Toggle navigation" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </header>
   
+  <!-- Mobile Navigation -->
   <nav class="mobile-nav" aria-label="Main navigation">
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
@@ -33,58 +40,38 @@
     <a href="contact.html">Contact</a>
   </nav>
 
+  <!-- Main Content -->
   <main id="main">
-    <div class="page-header">
-      <span class="tag">Our Work</span>
-      <h1 class="page-title text-gradient">Battle-Tested Results</h1>
-      <p class="page-desc">Real brands. Real growth. Real domination. See what's possible when strategy meets execution.</p>
-    </div>
-
-    <!-- Results Summary -->
-    <section class="section section-sm">
-      <div class="stats-grid">
-        <div class="stat-card">
-          <div class="stat-number">47+</div>
-          <div class="stat-label">Brands Scaled</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number">387%</div>
-          <div class="stat-label">Avg ROI</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number">2.5M+</div>
-          <div class="stat-label">Reach</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number">98%</div>
-          <div class="stat-label">Retention</div>
-        </div>
-      </div>
+    <!-- Page Header -->
+    <section class="page-header">
+      <span class="tag tag-animated">Case Studies</span>
+      <h1 class="page-title">
+        Proven <span class="text-gradient">Domination</span>
+      </h1>
+      <p class="page-desc">Real campaigns. Real results. Real brands we've transformed from local players into market leaders. Numbers don't lie.</p>
     </section>
 
-    <!-- Case Studies -->
+    <!-- Portfolio Grid -->
     <section class="section">
-      <div class="text-center mb-8">
-        <span class="tag">Case Studies</span>
-        <h2 class="section-title text-gradient-subtle">Success Stories</h2>
-        <p class="section-desc">Outcome-first storytelling. Every metric verified, every result earned.</p>
-      </div>
-
       <div class="portfolio-grid">
         <!-- Case Study 1 -->
         <article class="portfolio-card">
           <div class="portfolio-image">👗</div>
           <div class="portfolio-content">
             <span class="portfolio-tag">Fashion / E-commerce</span>
-            <h3>UrbanWear SA</h3>
-            <p><strong>Challenge:</strong> Local streetwear brand struggling with online visibility and low conversion rates.</p>
-            <p class="mt-4"><strong>Approach:</strong> Full social media overhaul, influencer partnerships with SA fashion creators, and targeted Facebook/Instagram ad campaigns.</p>
-            <p class="mt-4"><strong>Results:</strong></p>
-            <div class="portfolio-stats mt-4">
-              <span class="portfolio-stat"><strong>+450%</strong> Revenue</span>
+            <h3 style="font-size: var(--font-size-xl); margin-bottom: var(--space-3); color: var(--color-primary);">UrbanWear SA</h3>
+            <p style="color: var(--color-text-muted); line-height: 1.7; margin-bottom: var(--space-4);">Transformed a local streetwear brand into a national sensation through viral TikTok campaigns, influencer partnerships, and precision Facebook ads.</p>
+            
+            <div class="portfolio-stats">
+              <span class="portfolio-stat"><strong>+450%</strong> Revenue Growth</span>
               <span class="portfolio-stat"><strong>120K</strong> New Followers</span>
               <span class="portfolio-stat"><strong>8.2x</strong> ROAS</span>
-              <span class="portfolio-stat"><strong>3 months</strong> Timeline</span>
+              <span class="portfolio-stat"><strong>3 Months</strong> Timeline</span>
+            </div>
+            
+            <div style="margin-top: var(--space-5); padding-top: var(--space-5); border-top: 1px solid rgba(255,255,255,0.1);">
+              <strong style="color: var(--color-primary); font-size: var(--font-size-sm);">Services Used:</strong>
+              <p style="font-size: var(--font-size-sm); color: var(--color-text-dim); margin-top: var(--space-2);">Social Media Management • Paid Ads • Influencer Marketing • Content Creation</p>
             </div>
           </div>
         </article>
@@ -93,16 +80,20 @@
         <article class="portfolio-card">
           <div class="portfolio-image">💪</div>
           <div class="portfolio-content">
-            <span class="portfolio-tag">Fitness / Lifestyle</span>
-            <h3>FitnessHub</h3>
-            <p><strong>Challenge:</strong> Gym chain with declining memberships and no digital presence post-COVID.</p>
-            <p class="mt-4"><strong>Approach:</strong> Community-driven content strategy, user-generated content campaigns, local SEO, and lead generation ads.</p>
-            <p class="mt-4"><strong>Results:</strong></p>
-            <div class="portfolio-stats mt-4">
-              <span class="portfolio-stat"><strong>+300%</strong> Signups</span>
-              <span class="portfolio-stat"><strong>85K</strong> Community</span>
-              <span class="portfolio-stat"><strong>6.5x</strong> ROAS</span>
-              <span class="portfolio-stat"><strong>4 months</strong> Timeline</span>
+            <span class="portfolio-tag">Fitness / Health</span>
+            <h3 style="font-size: var(--font-size-xl); margin-bottom: var(--space-3); color: var(--color-primary);">FitnessHub</h3>
+            <p style="color: var(--color-text-muted); line-height: 1.7; margin-bottom: var(--space-4);">Scaled a boutique gym from 80 members to 400+ through local Instagram dominance, Google Ads targeting, and community building strategies.</p>
+            
+            <div class="portfolio-stats">
+              <span class="portfolio-stat"><strong>+400%</strong> Membership</span>
+              <span class="portfolio-stat"><strong>85K</strong> Reach Per Month</span>
+              <span class="portfolio-stat"><strong>12x</strong> Lead Growth</span>
+              <span class="portfolio-stat"><strong>6 Months</strong> Timeline</span>
+            </div>
+            
+            <div style="margin-top: var(--space-5); padding-top: var(--space-5); border-top: 1px solid rgba(255,255,255,0.1);">
+              <strong style="color: var(--color-primary); font-size: var(--font-size-sm);">Services Used:</strong>
+              <p style="font-size: var(--font-size-sm); color: var(--color-text-dim); margin-top: var(--space-2);">Local SEO • Google Ads • Social Media • Email Marketing</p>
             </div>
           </div>
         </article>
@@ -112,137 +103,270 @@
           <div class="portfolio-image">💄</div>
           <div class="portfolio-content">
             <span class="portfolio-tag">Beauty / Cosmetics</span>
-            <h3>Luxe Beauty</h3>
-            <p><strong>Challenge:</strong> Premium beauty brand wanting to differentiate from mass-market competitors.</p>
-            <p class="mt-4"><strong>Approach:</strong> Complete brand refresh, aspirational content strategy, micro-influencer network, and Pinterest/Instagram focus.</p>
-            <p class="mt-4"><strong>Results:</strong></p>
-            <div class="portfolio-stats mt-4">
-              <span class="portfolio-stat"><strong>+280%</strong> Sales</span>
-              <span class="portfolio-stat"><strong>95K</strong> Followers</span>
-              <span class="portfolio-stat"><strong>7.1x</strong> ROAS</span>
-              <span class="portfolio-stat"><strong>5 months</strong> Timeline</span>
+            <h3 style="font-size: var(--font-size-xl); margin-bottom: var(--space-3); color: var(--color-primary);">Luxe Beauty</h3>
+            <p style="color: var(--color-text-muted); line-height: 1.7; margin-bottom: var(--space-4);">Launched a new beauty line with influencer campaigns and viral content, achieving 6-figure sales in the first 90 days.</p>
+            
+            <div class="portfolio-stats">
+              <span class="portfolio-stat"><strong>R1.2M</strong> First Quarter Sales</span>
+              <span class="portfolio-stat"><strong>2.5M</strong> Impressions</span>
+              <span class="portfolio-stat"><strong>15%</strong> Conversion Rate</span>
+              <span class="portfolio-stat"><strong>3 Months</strong> Timeline</span>
+            </div>
+            
+            <div style="margin-top: var(--space-5); padding-top: var(--space-5); border-top: 1px solid rgba(255,255,255,0.1);">
+              <strong style="color: var(--color-primary); font-size: var(--font-size-sm);">Services Used:</strong>
+              <p style="font-size: var(--font-size-sm); color: var(--color-text-dim); margin-top: var(--space-2);">Product Launch Strategy • Influencer Marketing • Paid Ads • Content Creation</p>
             </div>
           </div>
         </article>
 
         <!-- Case Study 4 -->
         <article class="portfolio-card">
-          <div class="portfolio-image">💻</div>
+          <div class="portfolio-image">🍕</div>
           <div class="portfolio-content">
-            <span class="portfolio-tag">Tech / B2B</span>
-            <h3>TechSolutions</h3>
-            <p><strong>Challenge:</strong> IT services company with great product but zero thought leadership and weak lead pipeline.</p>
-            <p class="mt-4"><strong>Approach:</strong> LinkedIn authority building, thought leadership content, case study campaigns, and targeted LinkedIn ads to decision-makers.</p>
-            <p class="mt-4"><strong>Results:</strong></p>
-            <div class="portfolio-stats mt-4">
-              <span class="portfolio-stat"><strong>+520%</strong> Leads</span>
-              <span class="portfolio-stat"><strong>40K</strong> LinkedIn</span>
-              <span class="portfolio-stat"><strong>12x</strong> ROAS</span>
-              <span class="portfolio-stat"><strong>6 months</strong> Timeline</span>
+            <span class="portfolio-tag">Food & Beverage</span>
+            <h3 style="font-size: var(--font-size-xl); margin-bottom: var(--space-3); color: var(--color-primary);">PizzaLab JHB</h3>
+            <p style="color: var(--color-text-muted); line-height: 1.7; margin-bottom: var(--space-4);">Turned a struggling pizza spot into the most-talked-about restaurant in Johannesburg through meme marketing and strategic partnerships.</p>
+            
+            <div class="portfolio-stats">
+              <span class="portfolio-stat"><strong>+350%</strong> Orders</span>
+              <span class="portfolio-stat"><strong>50K</strong> New Followers</span>
+              <span class="portfolio-stat"><strong>12K</strong> Google Reviews</span>
+              <span class="portfolio-stat"><strong>4 Months</strong> Timeline</span>
+            </div>
+            
+            <div style="margin-top: var(--space-5); padding-top: var(--space-5); border-top: 1px solid rgba(255,255,255,0.1);">
+              <strong style="color: var(--color-primary); font-size: var(--font-size-sm);">Services Used:</strong>
+              <p style="font-size: var(--font-size-sm); color: var(--color-text-dim); margin-top: var(--space-2);">Social Media • Viral Content • Influencer Partnerships • Review Management</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Case Study 5 -->
+        <article class="portfolio-card">
+          <div class="portfolio-image">📱</div>
+          <div class="portfolio-content">
+            <span class="portfolio-tag">Tech / SaaS</span>
+            <h3 style="font-size: var(--font-size-xl); margin-bottom: var(--space-3); color: var(--color-primary);">TaskFlow Pro</h3>
+            <p style="color: var(--color-text-muted); line-height: 1.7; margin-bottom: var(--space-4);">Scaled a productivity app from 500 to 15,000 users through LinkedIn thought leadership, demo videos, and targeted B2B ads.</p>
+            
+            <div class="portfolio-stats">
+              <span class="portfolio-stat"><strong>15K</strong> New Users</span>
+              <span class="portfolio-stat"><strong>R850K</strong> MRR</span>
+              <span class="portfolio-stat"><strong>22%</strong> Trial-to-Paid</span>
+              <span class="portfolio-stat"><strong>8 Months</strong> Timeline</span>
+            </div>
+            
+            <div style="margin-top: var(--space-5); padding-top: var(--space-5); border-top: 1px solid rgba(255,255,255,0.1);">
+              <strong style="color: var(--color-primary); font-size: var(--font-size-sm);">Services Used:</strong>
+              <p style="font-size: var(--font-size-sm); color: var(--color-text-dim); margin-top: var(--space-2);">LinkedIn Marketing • Video Content • B2B Ads • Email Nurture Campaigns</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Case Study 6 -->
+        <article class="portfolio-card">
+          <div class="portfolio-image">🏠</div>
+          <div class="portfolio-content">
+            <span class="portfolio-tag">Real Estate</span>
+            <h3 style="font-size: var(--font-size-xl); margin-bottom: var(--space-3); color: var(--color-primary);">Elite Properties</h3>
+            <p style="color: var(--color-text-muted); line-height: 1.7; margin-bottom: var(--space-4);">Positioned a luxury real estate agency as the go-to for high-net-worth buyers through premium branding and targeted Facebook campaigns.</p>
+            
+            <div class="portfolio-stats">
+              <span class="portfolio-stat"><strong>R45M</strong> Sales Generated</span>
+              <span class="portfolio-stat"><strong>180</strong> Qualified Leads</span>
+              <span class="portfolio-stat"><strong>35%</strong> Close Rate</span>
+              <span class="portfolio-stat"><strong>5 Months</strong> Timeline</span>
+            </div>
+            
+            <div style="margin-top: var(--space-5); padding-top: var(--space-5); border-top: 1px solid rgba(255,255,255,0.1);">
+              <strong style="color: var(--color-primary); font-size: var(--font-size-sm);">Services Used:</strong>
+              <p style="font-size: var(--font-size-sm); color: var(--color-text-dim); margin-top: var(--space-2);">Brand Strategy • Facebook Ads • Professional Photography • Landing Page Optimization</p>
             </div>
           </div>
         </article>
       </div>
     </section>
 
+    <!-- Results Section -->
+    <section class="section">
+      <div class="section-header">
+        <span class="tag tag-animated">Aggregate Impact</span>
+        <h2 class="section-title">
+          Total <span class="text-gradient">Destruction</span>
+        </h2>
+        <p class="section-desc">Combined results across all our client campaigns.</p>
+      </div>
+      
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number">2.5M+</div>
+          <div class="stat-label">Total Reach Generated</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">R87M+</div>
+          <div class="stat-label">Revenue Driven</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">387%</div>
+          <div class="stat-label">Average ROI</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">47+</div>
+          <div class="stat-label">Brands Scaled</div>
+        </div>
+      </div>
+    </section>
+
     <!-- Testimonials -->
     <section class="section">
-      <div class="text-center mb-8">
-        <span class="tag">Testimonials</span>
-        <h2 class="section-title text-gradient-subtle">Client Voices</h2>
+      <div class="section-header">
+        <span class="tag tag-animated">Client Voices</span>
+        <h2 class="section-title">
+          What They <span class="text-gradient">Say</span>
+        </h2>
       </div>
-
-      <div class="testimonial">
-        <div class="stars">★★★★★</div>
-        <p class="testimonial-text">"KMDynamics didn't just grow our brand—they weaponized it. Our engagement exploded and sales tripled in 90 days. This isn't marketing. This is warfare."</p>
-        <div class="author">
-          <div class="avatar">M</div>
-          <div class="author-info">
-            <h4>Mpho Kgosana</h4>
-            <span>CEO, UrbanWear SA</span>
+      
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="stars">★★★★★</div>
+          </div>
+          <p class="testimonial-text">"KMDynamics didn't just grow our brand—they weaponized it. Our engagement exploded and sales tripled in 90 days. This isn't marketing. This is warfare."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">M</div>
+            <div class="author-info">
+              <h4>Mpho Kgosana</h4>
+              <span>CEO, UrbanWear SA</span>
+            </div>
           </div>
         </div>
-      </div>
-
-      <div class="testimonial">
-        <div class="stars">★★★★★</div>
-        <p class="testimonial-text">"These guys are absolute savages. They turned our ad spend into a money printer. ROI went from 2x to 8x in 4 months. Game-changers."</p>
-        <div class="author">
-          <div class="avatar">N</div>
-          <div class="author-info">
-            <h4>Neo Molefe</h4>
-            <span>Founder, FitnessHub</span>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="stars">★★★★★</div>
+          </div>
+          <p class="testimonial-text">"These guys are absolute savages. They turned our ad spend into a money printer. ROI went from 2x to 8x in 4 months. Game-changers."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">N</div>
+            <div class="author-info">
+              <h4>Neo Molefe</h4>
+              <span>Founder, FitnessHub</span>
+            </div>
           </div>
         </div>
-      </div>
-
-      <div class="testimonial">
-        <div class="stars">★★★★★</div>
-        <p class="testimonial-text">"Professional, ruthless, results-obsessed. They made us the talk of the industry. Our competitors are still playing catch-up."</p>
-        <div class="author">
-          <div class="avatar">K</div>
-          <div class="author-info">
-            <h4>Karabo Theron</h4>
-            <span>Owner, Luxe Beauty</span>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="stars">★★★★★</div>
           </div>
-        </div>
-      </div>
-
-      <div class="testimonial">
-        <div class="stars">★★★★★</div>
-        <p class="testimonial-text">"Their B2B expertise is unmatched. We went from invisible to inevitable in our space. Best investment we ever made."</p>
-        <div class="author">
-          <div class="avatar">L</div>
-          <div class="author-info">
-            <h4>Lebo Sithole</h4>
-            <span>CEO, TechSolutions</span>
+          <p class="testimonial-text">"Professional, ruthless, results-obsessed. They made us the talk of the industry. Our competitors are still playing catch-up."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">K</div>
+            <div class="author-info">
+              <h4>Karabo Theron</h4>
+              <span>Owner, Luxe Beauty</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CTA -->
+    <!-- CTA Section -->
     <section class="section">
       <div class="cta-box">
-        <h2 class="text-gradient-subtle">Be Our Next Success Story</h2>
-        <p>Ready to join the brands that have achieved extraordinary growth?</p>
-        <a href="contact.html" class="btn btn-primary btn-lg">Start Your Journey</a>
+        <h2>Want Results Like <span class="text-gradient">These</span>?</h2>
+        <p>Your brand could be our next success story. Let's build a case study worth bragging about.</p>
+        <div style="display: flex; flex-direction: column; gap: var(--space-4); align-items: center; margin-top: var(--space-6);">
+          <a href="contact.html" class="btn btn-primary btn-glow">
+            <span>Start Your Success Story</span>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M4 10h12m-6-6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="pricing.html" class="btn btn-ghost">View Our Pricing →</a>
+        </div>
       </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="footer">
-    <div class="footer-logo">KMDYNAMICS</div>
-    <p class="footer-desc">We don't build brands. We build empires.</p>
-    <nav class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <div class="social-links">
-      <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
-      <a href="#" class="social-link" aria-label="LinkedIn">in</a>
-      <a href="#" class="social-link" aria-label="Facebook">fb</a>
-      <a href="#" class="social-link" aria-label="Instagram">ig</a>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <span class="logo-text">KM</span><span class="logo-accent">DYNAMICS</span>
+        </div>
+        <p class="footer-tagline">We don't build brands. We build empires.</p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
+          <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+          <a href="#" class="social-link" aria-label="Facebook">fb</a>
+          <a href="#" class="social-link" aria-label="Instagram">ig</a>
+        </div>
+      </div>
+      
+      <nav class="footer-nav">
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="services.html#social">Social Media</a>
+          <a href="services.html#ads">Paid Ads</a>
+          <a href="services.html#brand">Branding</a>
+          <a href="services.html#content">Content</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="about.html">About Us</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="mailto:kmdynamics1@gmail.com">kmdynamics1@gmail.com</a>
+          <span>Johannesburg, SA</span>
+          <span>Response in 24hrs</span>
+        </div>
+      </nav>
     </div>
-    <p class="copyright">© 2025 KMDynamics. Johannesburg, South Africa</p>
+    
+    <div class="footer-bottom">
+      <p class="copyright">© 2025 KMDynamics. Johannesburg, South Africa</p>
+    </div>
   </footer>
 
   <script>
+    // Mobile Menu Toggle
     function toggleMenu() {
-      document.querySelector('.menu-btn').classList.toggle('active');
-      document.querySelector('.mobile-nav').classList.toggle('active');
-      document.body.style.overflow = document.querySelector('.mobile-nav').classList.contains('active') ? 'hidden' : '';
+      const btn = document.querySelector('.menu-btn');
+      const nav = document.querySelector('.mobile-nav');
+      const isOpen = btn.classList.toggle('active');
+      nav.classList.toggle('active');
+      btn.setAttribute('aria-expanded', isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
     }
 
+    // Close menu on link click
     document.querySelectorAll('.mobile-nav a').forEach(link => {
       link.addEventListener('click', () => {
         document.querySelector('.menu-btn').classList.remove('active');
         document.querySelector('.mobile-nav').classList.remove('active');
+        document.querySelector('.menu-btn').setAttribute('aria-expanded', 'false');
         document.body.style.overflow = '';
       });
+    });
+
+    // Intersection Observer for animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-in');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -100px 0px' });
+
+    document.querySelectorAll('.portfolio-card, .testimonial-card, .stat-card').forEach(el => {
+      observer.observe(el);
     });
   </script>
 </body>
