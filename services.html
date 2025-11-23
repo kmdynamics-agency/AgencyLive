@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | KMDynamics</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    :root{--cyan:#00fff2;--pink:#ff00ea;--purple:#9d00ff}
+    body{font-family:'Space Grotesk',sans-serif;background:#000;color:#fff;overflow-x:hidden}
+    .bg{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;background:radial-gradient(circle at 20% 50%,rgba(0,255,242,.1)0,transparent 50%),radial-gradient(circle at 80% 80%,rgba(255,0,234,.1)0,transparent 50%)}
+    header{position:fixed;top:0;width:100%;z-index:1000;padding:15px 5%;display:flex;justify-content:space-between;align-items:center;background:rgba(0,0,0,.9);backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,255,242,.2)}
+    .logo{font-size:1.4rem;font-weight:900;background:linear-gradient(135deg,var(--cyan),var(--pink));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;text-decoration:none}
+    .menu-btn{width:35px;height:25px;display:flex;flex-direction:column;justify-content:space-between;cursor:pointer;z-index:1001}
+    .menu-btn span{width:100%;height:3px;background:var(--cyan);border-radius:3px;transition:.3s}
+    .menu-btn.active span:nth-child(1){transform:rotate(45deg) translate(8px,8px)}
+    .menu-btn.active span:nth-child(2){opacity:0}
+    .menu-btn.active span:nth-child(3){transform:rotate(-45deg) translate(8px,-8px)}
+    .mobile-nav{position:fixed;top:0;left:0;width:100%;height:100vh;background:rgba(0,0,0,.98);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:30px;transform:translateX(-100%);transition:.4s;z-index:999}
+    .mobile-nav.active{transform:translateX(0)}
+    .mobile-nav a{color:#fff;text-decoration:none;font-size:1.5rem;font-weight:700;transition:.3s}
+    .mobile-nav a:hover{color:var(--cyan)}
+    .page-header{padding:120px 5% 60px;text-align:center;position:relative;z-index:2}
+    .page-tag{font-size:.75rem;font-weight:800;color:var(--cyan);text-transform:uppercase;letter-spacing:2px;margin-bottom:10px;display:inline-block;padding:6px 15px;border:1px solid var(--cyan);border-radius:50px}
+    .page-title{font-size:2.5rem;font-weight:900;margin-bottom:15px;background:linear-gradient(135deg,#fff,var(--cyan),var(--pink));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+    .page-desc{font-size:1rem;color:rgba(255,255,255,.7);line-height:1.7}
+    .section{padding:40px 5%;position:relative;z-index:2}
+    .services-grid{display:grid;gap:25px}
+    .service-card{background:rgba(10,10,20,.8);border:1px solid rgba(0,255,242,.2);border-radius:25px;padding:35px 25px;transition:.3s}
+    .service-card:hover{border-color:var(--cyan);transform:translateY(-5px);box-shadow:0 20px 50px rgba(0,255,242,.2)}
+    .service-icon{font-size:3rem;margin-bottom:20px;display:block}
+    .service-card h3{font-size:1.5rem;font-weight:800;margin-bottom:12px;background:linear-gradient(135deg,#fff,var(--cyan));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+    .service-card p{font-size:.95rem;color:rgba(255,255,255,.7);line-height:1.7;margin-bottom:20px}
+    .service-features{list-style:none;margin-bottom:20px}
+    .service-features li{padding:10px 0;font-size:.9rem;color:rgba(255,255,255,.8);display:flex;align-items:center;gap:10px;border-bottom:1px solid rgba(255,255,255,.1)}
+    .service-features li::before{content:'✓';color:var(--cyan);font-weight:900}
+    .btn{padding:14px 30px;font-size:.9rem;font-weight:700;border:none;border-radius:50px;cursor:pointer;text-decoration:none;display:inline-block;transition:.3s;text-transform:uppercase}
+    .btn-primary{background:linear-gradient(135deg,var(--cyan),var(--pink));color:#000}
+    .process{margin-top:40px}
+    .process-title{font-size:1.8rem;font-weight:900;margin-bottom:25px;text-align:center;background:linear-gradient(135deg,#fff,var(--cyan));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+    .process-steps{display:grid;gap:20px}
+    .step{background:rgba(10,10,20,.8);border:1px solid rgba(0,255,242,.2);border-radius:20px;padding:25px;display:flex;gap:20px;align-items:flex-start}
+    .step-num{width:50px;height:50px;min-width:50px;background:linear-gradient(135deg,var(--cyan),var(--pink));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.3rem;font-weight:900;color:#000}
+    .step h4{font-size:1.1rem;font-weight:800;color:var(--cyan);margin-bottom:8px}
+    .step p{font-size:.9rem;color:rgba(255,255,255,.7);line-height:1.6}
+    .cta-box{background:linear-gradient(135deg,rgba(0,255,242,.1),rgba(255,0,234,.1));border:2px solid rgba(0,255,242,.3);border-radius:25px;padding:40px 25px;text-align:center;margin-top:40px}
+    .cta-box h2{font-size:1.6rem;font-weight:900;margin-bottom:15px;background:linear-gradient(135deg,#fff,var(--cyan));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+    .cta-box p{font-size:.95rem;color:rgba(255,255,255,.8);margin-bottom:25px}
+    footer{background:rgba(5,5,10,.95);border-top:1px solid rgba(0,255,242,.2);padding:40px 5% 30px;position:relative;z-index:2;text-align:center}
+    .footer-logo{font-size:1.8rem;font-weight:900;background:linear-gradient(135deg,var(--cyan),var(--pink));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:15px}
+    footer p{color:rgba(255,255,255,.6);font-size:.85rem;margin-bottom:20px}
+    .footer-links{display:flex;flex-wrap:wrap;justify-content:center;gap:15px;margin-bottom:20px}
+    .footer-links a{color:rgba(255,255,255,.7);text-decoration:none;font-size:.85rem}
+    .copyright{font-size:.75rem;color:rgba(255,255,255,.4)}
+  </style>
+</head>
+<body>
+  <div class="bg"></div>
+  <header>
+    <a href="index.html" class="logo">KMDYNAMICS</a>
+    <div class="menu-btn" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+  </header>
+  <nav class="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <div class="page-header">
+    <div class="page-tag">Our Arsenal</div>
+    <h1 class="page-title">Services That Destroy Competition</h1>
+    <p class="page-desc">Strategic weapons designed to obliterate your competition and catapult your brand to the top.</p>
+  </div>
+  <section class="section">
+    <div class="services-grid">
+      <div class="service-card">
+        <span class="service-icon">🚀</span>
+        <h3>Social Media Warfare</h3>
+        <p>Multi-platform dominance strategies that turn casual scrollers into obsessed customers.</p>
+        <ul class="service-features">
+          <li>Platform-specific content strategy</li>
+          <li>Community management</li>
+          <li>Growth hacking tactics</li>
+          <li>Analytics & reporting</li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary">Get Started</a>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">💰</span>
+        <h3>Paid Ads Artillery</h3>
+        <p>Precision-targeted campaigns with military efficiency. Every rand returns 5-10x.</p>
+        <ul class="service-features">
+          <li>Facebook & Instagram Ads</li>
+          <li>Google Ads management</li>
+          <li>Retargeting campaigns</li>
+          <li>A/B testing & optimization</li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary">Launch Campaign</a>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🎨</span>
+        <h3>Brand Architecture</h3>
+        <p>Visual identities so powerful they burn into memory.</p>
+        <ul class="service-features">
+          <li>Logo & visual identity</li>
+          <li>Brand guidelines</li>
+          <li>Brand voice development</li>
+          <li>Collateral design</li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary">Build Brand</a>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">📊</span>
+        <h3>SEO Domination</h3>
+        <p>Page one isn't enough. Position one. Own search results.</p>
+        <ul class="service-features">
+          <li>Keyword research</li>
+          <li>On-page optimization</li>
+          <li>Link building</li>
+          <li>Local SEO</li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary">Rank Higher</a>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🌟</span>
+        <h3>Influencer Arsenal</h3>
+        <p>Strategic partnerships with voices that actually move markets.</p>
+        <ul class="service-features">
+          <li>Influencer identification</li>
+          <li>Campaign management</li>
+          <li>Content collaboration</li>
+          <li>Performance tracking</li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary">Connect Now</a>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">📈</span>
+        <h3>Viral Content Engine</h3>
+        <p>Algorithm-optimized content that spreads like wildfire.</p>
+        <ul class="service-features">
+          <li>Trend analysis</li>
+          <li>Video production</li>
+          <li>Graphic design</li>
+          <li>Content calendar</li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary">Go Viral</a>
+      </div>
+    </div>
+    <div class="process">
+      <h2 class="process-title">Our Process</h2>
+      <div class="process-steps">
+        <div class="step"><div class="step-num">1</div><div><h4>Discovery</h4><p>We dive deep into your brand, goals, and competition.</p></div></div>
+        <div class="step"><div class="step-num">2</div><div><h4>Strategy</h4><p>Custom battle plan designed for maximum impact.</p></div></div>
+        <div class="step"><div class="step-num">3</div><div><h4>Execute</h4><p>Deploy campaigns with precision and creativity.</p></div></div>
+        <div class="step"><div class="step-num">4</div><div><h4>Dominate</h4><p>Scale what works, crush the competition.</p></div></div>
+      </div>
+    </div>
+    <div class="cta-box">
+      <h2>Ready To Deploy?</h2>
+      <p>Let's create a custom strategy that crushes your competition.</p>
+      <a href="contact.html" class="btn btn-primary">Start Now</a>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-logo">KMDYNAMICS</div>
+    <p>We don't build brands. We build empires.</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="copyright">© 2025 KMDynamics. Johannesburg, SA</div>
+  </footer>
+  <script>function toggleMenu(){document.querySelector('.menu-btn').classList.toggle('active');document.querySelector('.mobile-nav').classList.toggle('active')}</script>
+</body>
+</html>
