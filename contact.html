@@ -3,128 +3,298 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | KMDynamics</title>
+  <meta name="description" content="KMDynamics services: Social media marketing, paid advertising, branding, SEO, influencer marketing & viral content creation in Johannesburg.">
+  <meta name="keywords" content="social media marketing, paid ads, branding, SEO, influencer marketing, Johannesburg">
+  <link rel="canonical" href="https://kmdynamics.co.za/services.html">
+  
+  <title>Services | KMDynamics - Digital Marketing Arsenal</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <style>
-    *{margin:0;padding:0;box-sizing:border-box}
-    :root{--cyan:#00fff2;--pink:#ff00ea;--purple:#9d00ff}
-    body{font-family:'Space Grotesk',sans-serif;background:#000;color:#fff;overflow-x:hidden}
-    .bg{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;background:radial-gradient(circle at 20% 50%,rgba(0,255,242,.1)0,transparent 50%),radial-gradient(circle at 80% 80%,rgba(255,0,234,.1)0,transparent 50%)}
-    header{position:fixed;top:0;width:100%;z-index:1000;padding:15px 5%;display:flex;justify-content:space-between;align-items:center;background:rgba(0,0,0,.9);backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,255,242,.2)}
-    .logo{font-size:1.4rem;font-weight:900;background:linear-gradient(135deg,var(--cyan),var(--pink));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;text-decoration:none}
-    .menu-btn{width:35px;height:25px;display:flex;flex-direction:column;justify-content:space-between;cursor:pointer;z-index:1001}
-    .menu-btn span{width:100%;height:3px;background:var(--cyan);border-radius:3px;transition:.3s}
-    .menu-btn.active span:nth-child(1){transform:rotate(45deg) translate(8px,8px)}
-    .menu-btn.active span:nth-child(2){opacity:0}
-    .menu-btn.active span:nth-child(3){transform:rotate(-45deg) translate(8px,-8px)}
-    .mobile-nav{position:fixed;top:0;left:0;width:100%;height:100vh;background:rgba(0,0,0,.98);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:30px;transform:translateX(-100%);transition:.4s;z-index:999}
-    .mobile-nav.active{transform:translateX(0)}
-    .mobile-nav a{color:#fff;text-decoration:none;font-size:1.5rem;font-weight:700}
-    .page-header{padding:120px 5% 40px;text-align:center;position:relative;z-index:2}
-    .page-tag{font-size:.75rem;font-weight:800;color:var(--cyan);text-transform:uppercase;letter-spacing:2px;margin-bottom:10px;display:inline-block;padding:6px 15px;border:1px solid var(--cyan);border-radius:50px}
-    .page-title{font-size:2.5rem;font-weight:900;margin-bottom:15px;background:linear-gradient(135deg,#fff,var(--cyan),var(--pink));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-    .page-desc{font-size:1rem;color:rgba(255,255,255,.7);line-height:1.7}
-    .section{padding:20px 5% 60px;position:relative;z-index:2}
-    .contact-info{margin-bottom:30px}
-    .contact-card{background:rgba(10,10,20,.8);border:1px solid rgba(0,255,242,.2);border-radius:20px;padding:25px;margin-bottom:15px;display:flex;align-items:center;gap:20px;transition:.3s}
-    .contact-card:hover{border-color:var(--cyan);transform:translateX(5px)}
-    .contact-icon{width:55px;height:55px;min-width:55px;background:linear-gradient(135deg,var(--cyan),var(--pink));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem}
-    .contact-card h3{font-size:1rem;font-weight:800;color:var(--cyan);margin-bottom:5px}
-    .contact-card p{font-size:.9rem;color:rgba(255,255,255,.8)}
-    .contact-card a{color:rgba(255,255,255,.8);text-decoration:none}
-    .form-container{background:rgba(10,10,20,.8);border:1px solid rgba(0,255,242,.2);border-radius:25px;padding:30px 25px}
-    .form-title{font-size:1.5rem;font-weight:900;margin-bottom:25px;background:linear-gradient(135deg,#fff,var(--cyan));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-    .form-group{margin-bottom:20px}
-    .form-group label{display:block;margin-bottom:8px;font-weight:700;font-size:.85rem;color:var(--cyan);text-transform:uppercase;letter-spacing:1px}
-    .form-group input,.form-group textarea,.form-group select{width:100%;padding:16px 20px;background:rgba(255,255,255,.05);border:2px solid rgba(255,255,255,.1);border-radius:12px;color:#fff;font-size:1rem;font-family:'Space Grotesk',sans-serif;transition:.3s}
-    .form-group input:focus,.form-group textarea:focus,.form-group select:focus{outline:none;border-color:var(--cyan);box-shadow:0 0 20px rgba(0,255,242,.2)}
-    .form-group textarea{min-height:140px;resize:vertical}
-    .form-group select{cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%2300fff2' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 15px center;background-size:24px}
-    .form-group select option{background:#000;color:#fff}
-    .btn{padding:18px 35px;font-size:1rem;font-weight:700;border:none;border-radius:50px;cursor:pointer;text-decoration:none;display:inline-block;text-transform:uppercase;width:100%;transition:.3s}
-    .btn-primary{background:linear-gradient(135deg,var(--cyan),var(--pink));color:#000}
-    .btn-primary:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(0,255,242,.4)}
-    .social-section{margin-top:40px;text-align:center}
-    .social-title{font-size:1.3rem;font-weight:800;margin-bottom:20px;color:#fff}
-    .social-links{display:flex;justify-content:center;gap:15px}
-    .social-link{width:55px;height:55px;border:2px solid rgba(0,255,242,.3);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--cyan);text-decoration:none;font-size:1.3rem;font-weight:700;transition:.3s}
-    .social-link:hover{background:var(--cyan);color:#000;transform:translateY(-5px)}
-    .success-msg{position:fixed;top:80px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--cyan),var(--pink));color:#000;padding:15px 30px;border-radius:15px;font-weight:700;opacity:0;pointer-events:none;transition:.3s;z-index:9999}
-    .success-msg.show{opacity:1}
-    footer{background:rgba(5,5,10,.95);border-top:1px solid rgba(0,255,242,.2);padding:40px 5% 30px;position:relative;z-index:2;text-align:center}
-    .footer-logo{font-size:1.8rem;font-weight:900;background:linear-gradient(135deg,var(--cyan),var(--pink));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:15px}
-    footer p{color:rgba(255,255,255,.6);font-size:.85rem;margin-bottom:20px}
-    .footer-links{display:flex;flex-wrap:wrap;justify-content:center;gap:15px;margin-bottom:20px}
-    .footer-links a{color:rgba(255,255,255,.7);text-decoration:none;font-size:.85rem}
-    .copyright{font-size:.75rem;color:rgba(255,255,255,.4)}
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="bg"></div>
-  <header>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <div class="bg-gradient"></div>
+  
+  <header class="header">
     <a href="index.html" class="logo">KMDYNAMICS</a>
-    <div class="menu-btn" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+    <button class="menu-btn" onclick="toggleMenu()" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
   </header>
-  <nav class="mobile-nav">
+  
+  <nav class="mobile-nav" aria-label="Main navigation">
     <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
+    <a href="services.html" class="active">Services</a>
     <a href="pricing.html">Pricing</a>
     <a href="portfolio.html">Portfolio</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
   </nav>
-  <div class="success-msg" id="successMsg">✓ Message sent! We'll respond within 24 hours.</div>
-  <div class="page-header">
-    <div class="page-tag">Get Started</div>
-    <h1 class="page-title">Let's Build Your Empire</h1>
-    <p class="page-desc">Ready to dominate? Fill out the form and we'll respond within 24 hours.</p>
-  </div>
-  <section class="section">
-    <div class="contact-info">
-      <div class="contact-card"><div class="contact-icon">📧</div><div><h3>Email</h3><p><a href="mailto:kmdynamics1@gmail.com">kmdynamics1@gmail.com</a></p></div></div>
-      <div class="contact-card"><div class="contact-icon">📍</div><div><h3>Location</h3><p>Johannesburg, South Africa</p></div></div>
-      <div class="contact-card"><div class="contact-icon">⚡</div><div><h3>Response Time</h3><p>Within 24 Hours</p></div></div>
+
+  <main id="main">
+    <!-- Page Header -->
+    <div class="page-header">
+      <span class="tag">Our Arsenal</span>
+      <h1 class="page-title text-gradient">Services That Destroy Competition</h1>
+      <p class="page-desc">Strategic weapons designed to obliterate your competition and catapult your brand to industry leadership.</p>
     </div>
-    <div class="form-container">
-      <h2 class="form-title">Send Us a Message</h2>
-      <form id="contactForm">
-        <div class="form-group"><label>Your Name *</label><input type="text" name="name" required placeholder="John Doe"></div>
-        <div class="form-group"><label>Email Address *</label><input type="email" name="email" required placeholder="john@company.com"></div>
-        <div class="form-group"><label>Company Name</label><input type="text" name="company" placeholder="Your Company"></div>
-        <div class="form-group"><label>Budget Range</label><select name="budget"><option value="">Select Budget</option><option value="starter">R3k - R6k/month</option><option value="growth">R6k - R10k/month</option><option value="elite">R10k+/month</option><option value="custom">Custom Solution</option></select></div>
-        <div class="form-group"><label>Tell Us About Your Goals *</label><textarea name="message" required placeholder="What are you trying to achieve? What's holding you back?"></textarea></div>
-        <button type="submit" class="btn btn-primary">Launch Your Empire</button>
-      </form>
-    </div>
-    <div class="social-section">
-      <h3 class="social-title">Follow Us</h3>
-      <div class="social-links">
-        <a href="#" class="social-link">𝕏</a>
-        <a href="#" class="social-link">in</a>
-        <a href="#" class="social-link">fb</a>
-        <a href="#" class="social-link">ig</a>
+
+    <!-- Service Philosophy -->
+    <section class="section section-sm">
+      <div class="card card-gradient text-center">
+        <h2 class="text-gradient-subtle mb-4">Our Philosophy</h2>
+        <p class="text-muted">We don't do "good enough." Every strategy, every campaign, every piece of content is engineered for maximum impact. We're obsessed with results because your success is our success.</p>
       </div>
-    </div>
-  </section>
-  <footer>
+    </section>
+
+    <!-- All Services -->
+    <section class="section">
+      <div class="services-grid">
+        <article class="service-card">
+          <span class="service-icon">🚀</span>
+          <h3>Social Media Warfare</h3>
+          <p>Multi-platform dominance strategies that turn casual scrollers into obsessed customers.</p>
+          <ul class="feature-list">
+            <li>Platform-specific content strategy</li>
+            <li>Community management & engagement</li>
+            <li>Growth hacking tactics</li>
+            <li>Analytics & performance reporting</li>
+            <li>Competitor monitoring</li>
+          </ul>
+          <p class="text-muted"><strong class="text-primary">Best for:</strong> Brands wanting to build loyal communities</p>
+          <a href="contact.html?service=social" class="btn btn-primary btn-block mt-4">Get Started</a>
+        </article>
+
+        <article class="service-card">
+          <span class="service-icon">💰</span>
+          <h3>Paid Ads Artillery</h3>
+          <p>Precision-targeted campaigns with military efficiency. Every rand returns 5-10x.</p>
+          <ul class="feature-list">
+            <li>Facebook & Instagram Ads</li>
+            <li>Google Ads & YouTube</li>
+            <li>Retargeting campaigns</li>
+            <li>A/B testing & optimization</li>
+            <li>Conversion tracking setup</li>
+          </ul>
+          <p class="text-muted"><strong class="text-primary">Best for:</strong> Brands ready to scale fast</p>
+          <a href="contact.html?service=ads" class="btn btn-primary btn-block mt-4">Launch Campaign</a>
+        </article>
+
+        <article class="service-card">
+          <span class="service-icon">🎨</span>
+          <h3>Brand Architecture</h3>
+          <p>Visual identities so powerful they burn into memory and build lasting loyalty.</p>
+          <ul class="feature-list">
+            <li>Logo & visual identity design</li>
+            <li>Brand guidelines & style guide</li>
+            <li>Brand voice development</li>
+            <li>Collateral & print design</li>
+            <li>Brand positioning strategy</li>
+          </ul>
+          <p class="text-muted"><strong class="text-primary">Best for:</strong> New brands or complete rebrands</p>
+          <a href="contact.html?service=brand" class="btn btn-primary btn-block mt-4">Build Brand</a>
+        </article>
+
+        <article class="service-card">
+          <span class="service-icon">📊</span>
+          <h3>SEO Domination</h3>
+          <p>Page one isn't good enough. Position one. We optimize to own search results.</p>
+          <ul class="feature-list">
+            <li>Keyword research & strategy</li>
+            <li>On-page optimization</li>
+            <li>Technical SEO audits</li>
+            <li>Link building campaigns</li>
+            <li>Local SEO for SA businesses</li>
+          </ul>
+          <p class="text-muted"><strong class="text-primary">Best for:</strong> Brands wanting organic growth</p>
+          <a href="contact.html?service=seo" class="btn btn-primary btn-block mt-4">Rank Higher</a>
+        </article>
+
+        <article class="service-card">
+          <span class="service-icon">🌟</span>
+          <h3>Influencer Arsenal</h3>
+          <p>Strategic partnerships with voices that actually move markets and drive sales.</p>
+          <ul class="feature-list">
+            <li>Influencer identification & vetting</li>
+            <li>Campaign strategy & management</li>
+            <li>Content collaboration</li>
+            <li>Performance tracking</li>
+            <li>Long-term partnership building</li>
+          </ul>
+          <p class="text-muted"><strong class="text-primary">Best for:</strong> Brands targeting Gen Z & millennials</p>
+          <a href="contact.html?service=influencer" class="btn btn-primary btn-block mt-4">Activate Network</a>
+        </article>
+
+        <article class="service-card">
+          <span class="service-icon">📈</span>
+          <h3>Viral Content Engine</h3>
+          <p>Algorithm-optimized content that spreads like wildfire and converts at scale.</p>
+          <ul class="feature-list">
+            <li>Trend analysis & newsjacking</li>
+            <li>Video production & editing</li>
+            <li>Graphic design & motion</li>
+            <li>Content calendar planning</li>
+            <li>Platform-specific optimization</li>
+          </ul>
+          <p class="text-muted"><strong class="text-primary">Best for:</strong> Brands wanting explosive reach</p>
+          <a href="contact.html?service=content" class="btn btn-primary btn-block mt-4">Go Viral</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="section">
+      <div class="text-center mb-8">
+        <span class="tag">Our Process</span>
+        <h2 class="section-title text-gradient-subtle">How We Deliver Results</h2>
+        <p class="section-desc">A proven 5-step process that consistently delivers exceptional outcomes.</p>
+      </div>
+      
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h4>Discovery</h4>
+            <p>We dive deep into your brand, goals, audience, and competition to understand what makes you unique.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h4>Strategy</h4>
+            <p>Custom battle plan designed specifically for your brand with clear KPIs and milestones.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h4>Create</h4>
+            <p>Our team produces scroll-stopping content and campaigns that demand attention.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h4>Launch</h4>
+            <p>Deploy campaigns with precision timing and continuous monitoring for optimal performance.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-number">5</div>
+          <div class="step-content">
+            <h4>Optimize</h4>
+            <p>Data-driven refinement to scale what works and maximize your ROI continuously.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+      <div class="text-center mb-8">
+        <span class="tag">FAQ</span>
+        <h2 class="section-title text-gradient-subtle">Common Questions</h2>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">How long until I see results?</div>
+        <div class="faq-answer">Most clients see initial results within 30 days. Significant growth typically happens within 90 days. We set realistic expectations based on your specific goals and starting point.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Do you work with small businesses?</div>
+        <div class="faq-answer">Absolutely! Our Starter package is designed specifically for emerging brands. We've helped businesses of all sizes achieve remarkable growth.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">What industries do you specialize in?</div>
+        <div class="faq-answer">We've worked across fashion, fitness, beauty, tech, F&B, and professional services. Our strategies are adaptable to any industry that wants to dominate.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Can I choose specific services?</div>
+        <div class="faq-answer">Yes! While our packages bundle popular services, we also offer custom solutions tailored to your specific needs. Contact us to discuss.</div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+      <div class="cta-box">
+        <h2 class="text-gradient-subtle">Ready To Deploy Your Arsenal?</h2>
+        <p>Let's create a custom strategy that crushes your competition.</p>
+        <div style="display:flex;flex-direction:column;gap:var(--space-4);align-items:center;">
+          <a href="contact.html" class="btn btn-primary btn-lg">Start Now</a>
+          <a href="pricing.html" class="btn btn-ghost">View Pricing →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
     <div class="footer-logo">KMDYNAMICS</div>
-    <p>We don't build brands. We build empires.</p>
-    <div class="footer-links"><a href="index.html">Home</a><a href="services.html">Services</a><a href="pricing.html">Pricing</a><a href="portfolio.html">Portfolio</a></div>
-    <div class="copyright">© 2025 KMDynamics. Johannesburg, SA</div>
+    <p class="footer-desc">We don't build brands. We build empires.</p>
+    <nav class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="social-links">
+      <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
+      <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+      <a href="#" class="social-link" aria-label="Facebook">fb</a>
+      <a href="#" class="social-link" aria-label="Instagram">ig</a>
+    </div>
+    <p class="copyright">© 2025 KMDynamics. Johannesburg, South Africa</p>
   </footer>
+
   <script>
-    function toggleMenu(){document.querySelector('.menu-btn').classList.toggle('active');document.querySelector('.mobile-nav').classList.toggle('active')}
-    document.getElementById('contactForm').addEventListener('submit',function(e){
-      e.preventDefault();
-      const fd=new FormData(this);
-      const d={};fd.forEach((v,k)=>{d[k]=v});
-      const subj=`New Lead from ${d.name||'Website'}`;
-      const body=`Name: ${d.name}\nEmail: ${d.email}\nCompany: ${d.company||'Not provided'}\nBudget: ${d.budget||'Not specified'}\n\nMessage:\n${d.message}`;
-      window.location.href=`mailto:kmdynamics1@gmail.com?subject=${encodeURIComponent(subj)}&body=${encodeURIComponent(body)}`;
-      document.getElementById('successMsg').classList.add('show');
-      setTimeout(()=>{document.getElementById('successMsg').classList.remove('show')},4000);
-      this.reset();
+    function toggleMenu() {
+      const btn = document.querySelector('.menu-btn');
+      const nav = document.querySelector('.mobile-nav');
+      btn.classList.toggle('active');
+      nav.classList.toggle('active');
+      document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
+    }
+
+    document.querySelectorAll('.mobile-nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.querySelector('.menu-btn').classList.remove('active');
+        document.querySelector('.mobile-nav').classList.remove('active');
+        document.body.style.overflow = '';
+      });
     });
+
+    // FAQ Accordion
+    document.querySelectorAll('.faq-question').forEach(q => {
+      q.addEventListener('click', () => {
+        q.parentElement.classList.toggle('active');
+      });
+    });
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Digital Marketing",
+    "provider": {
+      "@type": "Organization",
+      "name": "KMDynamics"
+    },
+    "areaServed": "South Africa",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Marketing Services",
+      "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Social Media Marketing"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Paid Advertising"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Brand Strategy"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "SEO Services"}}
+      ]
+    }
+  }
   </script>
 </body>
 </html>
