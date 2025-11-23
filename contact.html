@@ -3,11 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Contact KMDynamics: Get in touch for digital marketing services in Johannesburg. Response within 24 hours. Email: kmdynamics1@gmail.com">
-  <link rel="canonical" href="https://kmdynamics.co.za/contact.html">
-  
-  <title>Contact | KMDynamics - Let's Build Your Empire</title>
-  
+  <title>Contact | KMDynamics - Start Your Empire</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -15,18 +11,26 @@
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
-  <div class="bg-gradient"></div>
   
-  <!-- Toast Notification -->
-  <div class="toast" id="toast" role="alert">✓ Message sent! We'll respond within 24 hours.</div>
+  <!-- Dynamic Background -->
+  <div class="bg-system">
+    <div class="gradient-orb orb-1"></div>
+    <div class="gradient-orb orb-2"></div>
+    <div class="gradient-orb orb-3"></div>
+    <div class="grid-lines"></div>
+  </div>
   
+  <!-- Header -->
   <header class="header">
-    <a href="index.html" class="logo">KMDYNAMICS</a>
-    <button class="menu-btn" onclick="toggleMenu()" aria-label="Toggle navigation">
+    <a href="index.html" class="logo">
+      <span class="logo-text">KM</span><span class="logo-accent">DYNAMICS</span>
+    </a>
+    <button class="menu-btn" onclick="toggleMenu()" aria-label="Toggle navigation" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </header>
   
+  <!-- Mobile Navigation -->
   <nav class="mobile-nav" aria-label="Main navigation">
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
@@ -36,274 +40,436 @@
     <a href="contact.html" class="active">Contact</a>
   </nav>
 
+  <!-- Main Content -->
   <main id="main">
-    <div class="page-header">
-      <span class="tag">Get Started</span>
-      <h1 class="page-title text-gradient">Let's Solve Growth Together</h1>
-      <p class="page-desc">Ready to dominate? Fill out the form and we'll respond with a custom strategy within 24 hours.</p>
-    </div>
-
-    <!-- Contact Info Cards -->
-    <section class="section section-sm">
-      <div class="contact-cards">
-        <div class="contact-card">
-          <div class="contact-icon">📧</div>
-          <div>
-            <h3>Email</h3>
-            <p><a href="mailto:kmdynamics1@gmail.com">kmdynamics1@gmail.com</a></p>
-          </div>
-        </div>
-        <div class="contact-card">
-          <div class="contact-icon">📍</div>
-          <div>
-            <h3>Location</h3>
-            <p>Johannesburg, South Africa</p>
-          </div>
-        </div>
-        <div class="contact-card">
-          <div class="contact-icon">⚡</div>
-          <div>
-            <h3>Response</h3>
-            <p>Within 24 Hours</p>
-          </div>
-        </div>
-      </div>
+    <!-- Page Header -->
+    <section class="page-header">
+      <span class="tag tag-animated">Let's Talk</span>
+      <h1 class="page-title">
+        Start Your <span class="text-gradient">Empire</span>
+      </h1>
+      <p class="page-desc">Ready to dominate your market? Book a free strategy call and we'll show you exactly how we'd crush your competition and scale your brand.</p>
     </section>
 
-    <!-- Contact Form -->
+    <!-- Contact Section -->
     <section class="section">
-      <div class="card">
-        <h2 class="text-gradient-subtle text-center mb-6">Send Us a Message</h2>
+      <div style="max-width: 1000px; margin: 0 auto; display: grid; gap: var(--space-8);">
+        <!-- Contact Form -->
+        <div class="card-gradient" style="padding: var(--space-10) var(--space-6);">
+          <h2 style="font-size: var(--font-size-2xl); margin-bottom: var(--space-2); text-align: center;">
+            Book Your <span class="text-gradient">Strategy Call</span>
+          </h2>
+          <p style="text-align: center; color: var(--color-text-muted); margin-bottom: var(--space-8); font-size: var(--font-size-sm);">
+            Fill out the form below and we'll respond within 24 hours. No pressure. No obligations. Just value.
+          </p>
+          
+          <form id="contactForm" onsubmit="handleSubmit(event)">
+            <!-- Honeypot field for spam protection -->
+            <div class="form-honeypot">
+              <label for="website">Leave this field empty</label>
+              <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+            </div>
+            
+            <div class="form-group">
+              <label for="name" class="form-label">Full Name *</label>
+              <input type="text" id="name" name="name" class="form-input" required placeholder="John Doe">
+            </div>
+            
+            <div class="form-group">
+              <label for="email" class="form-label">Email Address *</label>
+              <input type="email" id="email" name="email" class="form-input" required placeholder="john@company.com">
+            </div>
+            
+            <div class="form-group">
+              <label for="phone" class="form-label">Phone Number</label>
+              <input type="tel" id="phone" name="phone" class="form-input" placeholder="+27 XX XXX XXXX">
+            </div>
+            
+            <div class="form-group">
+              <label for="company" class="form-label">Company/Brand Name *</label>
+              <input type="text" id="company" name="company" class="form-input" required placeholder="Your Brand">
+            </div>
+            
+            <div class="form-group">
+              <label for="industry" class="form-label">Industry *</label>
+              <select id="industry" name="industry" class="form-select" required>
+                <option value="">Select your industry</option>
+                <option value="fashion">Fashion & Apparel</option>
+                <option value="beauty">Beauty & Cosmetics</option>
+                <option value="fitness">Fitness & Health</option>
+                <option value="food">Food & Beverage</option>
+                <option value="tech">Tech & SaaS</option>
+                <option value="real-estate">Real Estate</option>
+                <option value="professional">Professional Services</option>
+                <option value="ecommerce">E-commerce</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="budget" class="form-label">Monthly Marketing Budget *</label>
+              <select id="budget" name="budget" class="form-select" required>
+                <option value="">Select budget range</option>
+                <option value="under-15k">Under R15,000</option>
+                <option value="15k-30k">R15,000 - R30,000</option>
+                <option value="30k-60k">R30,000 - R60,000</option>
+                <option value="60k-plus">R60,000+</option>
+                <option value="not-sure">Not Sure Yet</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="services" class="form-label">Services Needed *</label>
+              <select id="services" name="services" class="form-select" required>
+                <option value="">What do you need help with?</option>
+                <option value="social-media">Social Media Management</option>
+                <option value="paid-ads">Paid Advertising</option>
+                <option value="branding">Branding & Design</option>
+                <option value="content">Content Creation</option>
+                <option value="influencer">Influencer Marketing</option>
+                <option value="full-service">Full-Service Marketing</option>
+                <option value="not-sure">Not Sure - Need Advice</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="message" class="form-label">Tell Us About Your Goals *</label>
+              <textarea id="message" name="message" class="form-textarea" required placeholder="What are your biggest challenges? What results do you want to achieve? The more details, the better we can help."></textarea>
+            </div>
+            
+            <div class="form-group">
+              <label for="timeline" class="form-label">When Do You Want To Start?</label>
+              <select id="timeline" name="timeline" class="form-select">
+                <option value="">Select timeline</option>
+                <option value="asap">ASAP - Let's Go Now</option>
+                <option value="1-2-weeks">1-2 Weeks</option>
+                <option value="1-month">Within 1 Month</option>
+                <option value="exploring">Just Exploring Options</option>
+              </select>
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-block btn-glow">
+              <span>Send Message</span>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M4 10h12m-6-6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            
+            <p style="text-align: center; font-size: var(--font-size-xs); color: var(--color-text-dim); margin-top: var(--space-4);">
+              We typically respond within 24 hours. No spam. No pressure.
+            </p>
+          </form>
+        </div>
         
-        <form id="contactForm" novalidate>
-          <!-- Honeypot for spam -->
-          <div class="form-honeypot" aria-hidden="true">
-            <label for="website">Website</label>
-            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
-          </div>
-
-          <div class="form-group">
-            <label for="name" class="form-label">Your Name *</label>
-            <input type="text" id="name" name="name" class="form-input" required placeholder="John Doe" autocomplete="name">
-            <p class="form-error" id="nameError" hidden>Please enter your name</p>
-          </div>
-
-          <div class="form-group">
-            <label for="email" class="form-label">Email Address *</label>
-            <input type="email" id="email" name="email" class="form-input" required placeholder="john@company.com" autocomplete="email">
-            <p class="form-error" id="emailError" hidden>Please enter a valid email</p>
-          </div>
-
-          <div class="form-group">
-            <label for="company" class="form-label">Company Name</label>
-            <input type="text" id="company" name="company" class="form-input" placeholder="Your Company" autocomplete="organization">
-          </div>
-
-          <div class="form-group">
-            <label for="budget" class="form-label">Budget Range</label>
-            <select id="budget" name="budget" class="form-select">
-              <option value="">Select Budget</option>
-              <option value="starter">R2,999 - R6,000/month (Starter)</option>
-              <option value="growth">R6,000 - R10,000/month (Growth)</option>
-              <option value="elite">R10,000+/month (Elite)</option>
-              <option value="custom">Custom / Not Sure</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label">Services Interested In</label>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-3);margin-top:var(--space-2);">
-              <label style="display:flex;align-items:center;gap:var(--space-2);color:var(--color-text-muted);font-size:var(--font-size-sm);cursor:pointer;">
-                <input type="checkbox" name="services" value="social" style="accent-color:var(--color-primary);"> Social Media
-              </label>
-              <label style="display:flex;align-items:center;gap:var(--space-2);color:var(--color-text-muted);font-size:var(--font-size-sm);cursor:pointer;">
-                <input type="checkbox" name="services" value="ads" style="accent-color:var(--color-primary);"> Paid Ads
-              </label>
-              <label style="display:flex;align-items:center;gap:var(--space-2);color:var(--color-text-muted);font-size:var(--font-size-sm);cursor:pointer;">
-                <input type="checkbox" name="services" value="branding" style="accent-color:var(--color-primary);"> Branding
-              </label>
-              <label style="display:flex;align-items:center;gap:var(--space-2);color:var(--color-text-muted);font-size:var(--font-size-sm);cursor:pointer;">
-                <input type="checkbox" name="services" value="seo" style="accent-color:var(--color-primary);"> SEO
-              </label>
-              <label style="display:flex;align-items:center;gap:var(--space-2);color:var(--color-text-muted);font-size:var(--font-size-sm);cursor:pointer;">
-                <input type="checkbox" name="services" value="influencer" style="accent-color:var(--color-primary);"> Influencer
-              </label>
-              <label style="display:flex;align-items:center;gap:var(--space-2);color:var(--color-text-muted);font-size:var(--font-size-sm);cursor:pointer;">
-                <input type="checkbox" name="services" value="content" style="accent-color:var(--color-primary);"> Content
-              </label>
+        <!-- Contact Cards -->
+        <div class="contact-cards">
+          <a href="mailto:kmdynamics1@gmail.com" class="contact-card">
+            <div class="contact-icon">📧</div>
+            <div>
+              <h3>Email Us</h3>
+              <p>kmdynamics1@gmail.com</p>
+            </div>
+          </a>
+          
+          <div class="contact-card">
+            <div class="contact-icon">📍</div>
+            <div>
+              <h3>Location</h3>
+              <p>Johannesburg, South Africa</p>
             </div>
           </div>
-
-          <div class="form-group">
-            <label for="message" class="form-label">Tell Us About Your Goals *</label>
-            <textarea id="message" name="message" class="form-textarea" required placeholder="What are you trying to achieve? What's holding you back? What's your timeline?"></textarea>
-            <p class="form-error" id="messageError" hidden>Please describe your goals</p>
+          
+          <div class="contact-card">
+            <div class="contact-icon">⏱️</div>
+            <div>
+              <h3>Response Time</h3>
+              <p>Within 24 hours, guaranteed</p>
+            </div>
           </div>
-
-          <p style="font-size:var(--font-size-xs);color:var(--color-text-dim);margin-bottom:var(--space-4);">
-            By submitting, you agree to our <a href="#" style="color:var(--color-primary);">Privacy Policy</a>. We'll never share your data.
-          </p>
-
-          <button type="submit" class="btn btn-primary btn-block btn-lg">Send Message</button>
-        </form>
+        </div>
       </div>
     </section>
 
-    <!-- Alternative CTAs -->
-    <section class="section section-sm">
-      <div class="text-center">
-        <p class="text-muted mb-4">Prefer to email directly?</p>
-        <a href="mailto:kmdynamics1@gmail.com" class="btn btn-secondary">kmdynamics1@gmail.com</a>
-      </div>
-    </section>
-
-    <!-- Social -->
+    <!-- FAQ Section -->
     <section class="section">
-      <div class="text-center">
-        <h3 class="mb-6">Follow Us</h3>
-        <div class="social-links" style="justify-content:center;">
+      <div class="section-header">
+        <span class="tag tag-animated">Quick Answers</span>
+        <h2 class="section-title">
+          Before You <span class="text-gradient">Reach Out</span>
+        </h2>
+      </div>
+      
+      <div style="max-width: 800px; margin: 0 auto;">
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            What happens after I submit the form?
+          </div>
+          <div class="faq-answer">
+            We'll review your information and respond within 24 hours via email to schedule a free 30-minute strategy call. On the call, we'll discuss your goals, challenges, and show you exactly how we'd help you dominate.
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            Is the strategy call really free?
+          </div>
+          <div class="faq-answer">
+            100% free. No catch. No pressure. We'll audit your current marketing, share insights, and show you our approach. If it's a fit, great. If not, you still walk away with actionable advice worth thousands.
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            Do you work with startups or only established brands?
+          </div>
+          <div class="faq-answer">
+            We work with both! We've helped startups launch from zero and scaled 7-figure brands to 8 figures. What matters most is ambition and budget to invest in growth.
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            What's your minimum budget requirement?
+          </div>
+          <div class="faq-answer">
+            Our Starter package begins at R15,000/month. However, we recommend at least R25,000-30,000/month (including ad spend) to see meaningful results. Quality marketing requires investment.
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            How quickly can we get started?
+          </div>
+          <div class="faq-answer">
+            For motivated clients, we can start within 1-2 weeks. We'll onboard you, conduct discovery, and begin executing immediately. Speed matters in marketing.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="section">
+      <div class="section-header">
+        <span class="tag tag-animated">Join The Winners</span>
+        <h2 class="section-title">
+          Brands That Chose <span class="text-gradient">Domination</span>
+        </h2>
+      </div>
+      
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="stars">★★★★★</div>
+          </div>
+          <p class="testimonial-text">"Best decision we ever made. These guys turned our struggling brand into a profit machine in 4 months."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">M</div>
+            <div class="author-info">
+              <h4>Mpho Kgosana</h4>
+              <span>CEO, UrbanWear SA</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="stars">★★★★★</div>
+          </div>
+          <p class="testimonial-text">"ROI went from 2x to 8x. Our competitors are still trying to figure out what we did."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">N</div>
+            <div class="author-info">
+              <h4>Neo Molefe</h4>
+              <span>Founder, FitnessHub</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="stars">★★★★★</div>
+          </div>
+          <p class="testimonial-text">"Professional, fast, results-driven. They don't waste time—they get shit done."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">K</div>
+            <div class="author-info">
+              <h4>Karabo Theron</h4>
+              <span>Owner, Luxe Beauty</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section">
+      <div class="cta-box">
+        <h2>Stop Waiting. <span class="text-gradient">Start Winning.</span></h2>
+        <p>Every day you wait is a day your competitors get stronger. Let's change that. Book your strategy call now.</p>
+        <div style="margin-top: var(--space-6);">
+          <a href="#contactForm" class="btn btn-primary btn-glow" onclick="document.getElementById('name').focus();">
+            <span>Fill Out The Form Above</span>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M10 4v12m-6-6l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <span class="logo-text">KM</span><span class="logo-accent">DYNAMICS</span>
+        </div>
+        <p class="footer-tagline">We don't build brands. We build empires.</p>
+        <div class="social-links">
           <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
           <a href="#" class="social-link" aria-label="LinkedIn">in</a>
           <a href="#" class="social-link" aria-label="Facebook">fb</a>
           <a href="#" class="social-link" aria-label="Instagram">ig</a>
         </div>
       </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="footer-logo">KMDYNAMICS</div>
-    <p class="footer-desc">We don't build brands. We build empires.</p>
-    <nav class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="about.html">About</a>
-    </nav>
-    <p class="copyright">© 2025 KMDynamics. Johannesburg, South Africa</p>
+      
+      <nav class="footer-nav">
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="services.html#social">Social Media</a>
+          <a href="services.html#ads">Paid Ads</a>
+          <a href="services.html#brand">Branding</a>
+          <a href="services.html#content">Content</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="about.html">About Us</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="mailto:kmdynamics1@gmail.com">kmdynamics1@gmail.com</a>
+          <span>Johannesburg, SA</span>
+          <span>Response in 24hrs</span>
+        </div>
+      </nav>
+    </div>
+    
+    <div class="footer-bottom">
+      <p class="copyright">© 2025 KMDynamics. Johannesburg, South Africa</p>
+    </div>
   </footer>
 
+  <!-- Toast Notification -->
+  <div id="toast" class="toast"></div>
+
   <script>
-    // Menu Toggle
+    // Mobile Menu Toggle
     function toggleMenu() {
-      document.querySelector('.menu-btn').classList.toggle('active');
-      document.querySelector('.mobile-nav').classList.toggle('active');
-      document.body.style.overflow = document.querySelector('.mobile-nav').classList.contains('active') ? 'hidden' : '';
+      const btn = document.querySelector('.menu-btn');
+      const nav = document.querySelector('.mobile-nav');
+      const isOpen = btn.classList.toggle('active');
+      nav.classList.toggle('active');
+      btn.setAttribute('aria-expanded', isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
     }
 
+    // Close menu on link click
     document.querySelectorAll('.mobile-nav a').forEach(link => {
       link.addEventListener('click', () => {
         document.querySelector('.menu-btn').classList.remove('active');
         document.querySelector('.mobile-nav').classList.remove('active');
+        document.querySelector('.menu-btn').setAttribute('aria-expanded', 'false');
         document.body.style.overflow = '';
       });
     });
 
-    // Pre-fill from URL params
-    const params = new URLSearchParams(window.location.search);
-    if (params.get('plan')) {
-      const budget = document.getElementById('budget');
-      const planMap = { starter: 'starter', growth: 'growth', elite: 'elite', custom: 'custom' };
-      if (planMap[params.get('plan')]) budget.value = planMap[params.get('plan')];
-    }
-    if (params.get('service')) {
-      const checkbox = document.querySelector(`input[value="${params.get('service')}"]`);
-      if (checkbox) checkbox.checked = true;
-    }
-
-    // Form Validation & Submission
-    const form = document.getElementById('contactForm');
-    const toast = document.getElementById('toast');
-
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
+    // FAQ Toggle
+    function toggleFaq(element) {
+      const faqItem = element.parentElement;
+      const isActive = faqItem.classList.contains('active');
       
-      // Honeypot check
-      if (document.getElementById('website').value) return;
-
-      // Reset errors
-      document.querySelectorAll('.form-error').forEach(el => el.hidden = true);
-      document.querySelectorAll('.form-input, .form-textarea').forEach(el => el.classList.remove('error'));
-
-      // Validate
-      let valid = true;
-      const name = document.getElementById('name');
-      const email = document.getElementById('email');
-      const message = document.getElementById('message');
-
-      if (!name.value.trim()) {
-        name.classList.add('error');
-        document.getElementById('nameError').hidden = false;
-        valid = false;
+      // Close all FAQs
+      document.querySelectorAll('.faq-item').forEach(item => {
+        item.classList.remove('active');
+      });
+      
+      // Open clicked FAQ if it wasn't active
+      if (!isActive) {
+        faqItem.classList.add('active');
       }
+    }
 
-      if (!email.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
-        email.classList.add('error');
-        document.getElementById('emailError').hidden = false;
-        valid = false;
+    // Form Submission Handler
+    function handleSubmit(event) {
+      event.preventDefault();
+      
+      // Check honeypot
+      const honeypot = document.getElementById('website').value;
+      if (honeypot) {
+        showToast('Something went wrong. Please try again.');
+        return;
       }
-
-      if (!message.value.trim()) {
-        message.classList.add('error');
-        document.getElementById('messageError').hidden = false;
-        valid = false;
-      }
-
-      if (!valid) return;
-
-      // Gather data
-      const data = new FormData(form);
-      const services = Array.from(document.querySelectorAll('input[name="services"]:checked')).map(c => c.value).join(', ');
-
-      const subject = `New Lead: ${data.get('name')} - ${data.get('company') || 'Individual'}`;
-      const body = `Name: ${data.get('name')}
-Email: ${data.get('email')}
-Company: ${data.get('company') || 'Not provided'}
-Budget: ${data.get('budget') || 'Not specified'}
-Services: ${services || 'Not specified'}
-
-Message:
-${data.get('message')}`;
-
-      // Open email client
-      window.location.href = `mailto:kmdynamics1@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-      // Show toast
-      toast.classList.add('show');
-      setTimeout(() => toast.classList.remove('show'), 4000);
-
+      
+      const form = event.target;
+      const formData = new FormData(form);
+      
+      // Get form values
+      const name = formData.get('name');
+      const email = formData.get('email');
+      const company = formData.get('company');
+      const message = formData.get('message');
+      
+      // Create mailto link with form data
+      const subject = encodeURIComponent(`Strategy Call Request from ${name} - ${company}`);
+      const body = encodeURIComponent(
+        `Name: ${name}\n` +
+        `Email: ${email}\n` +
+        `Phone: ${formData.get('phone') || 'Not provided'}\n` +
+        `Company: ${company}\n` +
+        `Industry: ${formData.get('industry')}\n` +
+        `Budget: ${formData.get('budget')}\n` +
+        `Services: ${formData.get('services')}\n` +
+        `Timeline: ${formData.get('timeline') || 'Not specified'}\n\n` +
+        `Message:\n${message}`
+      );
+      
+      // Open mail client
+      window.location.href = `mailto:kmdynamics1@gmail.com?subject=${subject}&body=${body}`;
+      
+      // Show success message
+      showToast('Message prepared! Your email client should open. We\'ll respond within 24 hours.');
+      
       // Reset form
       form.reset();
-    });
+    }
 
-    // Real-time validation
-    document.querySelectorAll('.form-input, .form-textarea').forEach(input => {
-      input.addEventListener('blur', function() {
-        if (this.required && !this.value.trim()) {
-          this.classList.add('error');
-        } else {
-          this.classList.remove('error');
+    // Toast Notification
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      toast.textContent = message;
+      toast.classList.add('show');
+      
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 5000);
+    }
+
+    // Intersection Observer for animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-in');
         }
       });
-    });
-  </script>
+    }, { threshold: 0.1, rootMargin: '0px 0px -100px 0px' });
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ContactPage",
-    "mainEntity": {
-      "@type": "Organization",
-      "name": "KMDynamics",
-      "email": "kmdynamics1@gmail.com",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Johannesburg",
-        "addressCountry": "ZA"
-      }
-    }
-  }
+    document.querySelectorAll('.testimonial-card, .contact-card').forEach(el => {
+      observer.observe(el);
+    });
   </script>
 </body>
 </html>
