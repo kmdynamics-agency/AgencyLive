@@ -4,19 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KMDynamics | We Don't Build Brands. We Build Empires.</title>
-  <!-- Stylesheet -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Skip Link for Accessibility -->
   <a href="#main" class="skip-link">Skip to main content</a>
   
-  <!-- Background -->
-  <div class="bg-gradient"></div>
+  <!-- Dynamic Background -->
+  <div class="bg-system">
+    <div class="gradient-orb orb-1"></div>
+    <div class="gradient-orb orb-2"></div>
+    <div class="gradient-orb orb-3"></div>
+    <div class="grid-lines"></div>
+  </div>
   
   <!-- Header -->
   <header class="header">
-    <a href="index.html" class="logo">KMDYNAMICS</a>
+    <a href="index.html" class="logo">
+      <span class="logo-text">KM</span><span class="logo-accent">DYNAMICS</span>
+    </a>
     <button class="menu-btn" onclick="toggleMenu()" aria-label="Toggle navigation" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -36,155 +44,318 @@
   <main id="main">
     <!-- Hero Section -->
     <section class="hero">
-      <span class="tag">🔥 Transforming Brands Into Empires</span>
-      <h1 class="hero-title text-gradient">WE DON'T BUILD BRANDS. WE BUILD EMPIRES.</h1>
-      <p class="hero-desc">Stop playing small. We create marketing strategies so powerful, your brand becomes impossible to ignore. This isn't marketing. This is domination.</p>
-      <div class="hero-cta">
-        <a href="contact.html" class="btn btn-primary">Start Your Empire</a>
-        <a href="services.html" class="btn btn-secondary">View Services</a>
+      <div class="hero-content">
+        <span class="hero-tag">
+          <span class="pulse-dot"></span>
+          Transforming Brands Into Empires
+        </span>
+        <h1 class="hero-title">
+          <span class="title-line">WE DON'T BUILD</span>
+          <span class="title-line highlight">BRANDS.</span>
+          <span class="title-line">WE BUILD</span>
+          <span class="title-line highlight glow">EMPIRES.</span>
+        </h1>
+        <p class="hero-desc">Stop playing small. We create marketing strategies so powerful, your brand becomes <strong>impossible to ignore</strong>. This isn't marketing. This is domination.</p>
+        <div class="hero-cta">
+          <a href="contact.html" class="btn btn-primary btn-glow">
+            <span>Start Your Empire</span>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M4 10h12m-6-6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="portfolio.html" class="btn btn-secondary btn-glow">
+            <span>See Results</span>
+          </a>
+        </div>
+        
+        <!-- Animated Stats -->
+        <div class="hero-stats">
+          <div class="stat-item" data-count="2500000">
+            <div class="stat-number">2.5M+</div>
+            <div class="stat-label">Reach Generated</div>
+          </div>
+          <div class="stat-item" data-count="387">
+            <div class="stat-number">387%</div>
+            <div class="stat-label">Avg ROI</div>
+          </div>
+          <div class="stat-item" data-count="47">
+            <div class="stat-number">47+</div>
+            <div class="stat-label">Brands Scaled</div>
+          </div>
+          <div class="stat-item" data-count="98">
+            <div class="stat-number">98%</div>
+            <div class="stat-label">Client Retention</div>
+          </div>
+        </div>
       </div>
       
-      <!-- Stats -->
-      <div class="stats-grid">
-        <div class="stat-card">
-          <div class="stat-number">2.5M+</div>
-          <div class="stat-label">Reach Generated</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number">387%</div>
-          <div class="stat-label">Avg ROI</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number">47+</div>
-          <div class="stat-label">Brands Scaled</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number">98%</div>
-          <div class="stat-label">Retention</div>
-        </div>
+      <!-- Scroll Indicator -->
+      <div class="scroll-indicator">
+        <div class="scroll-line"></div>
+        <span>Scroll to explore</span>
       </div>
     </section>
 
     <!-- Services Preview -->
-    <section class="section">
-      <div class="text-center mb-8">
-        <span class="tag">Our Arsenal</span>
-        <h2 class="section-title text-gradient-subtle">Services That Dominate</h2>
+    <section class="section services-section">
+      <div class="section-header">
+        <span class="tag tag-animated">Our Arsenal</span>
+        <h2 class="section-title">
+          Services That <span class="text-gradient">Dominate</span>
+        </h2>
         <p class="section-desc">Strategic weapons designed to crush your competition and catapult your brand to the top.</p>
       </div>
       
-      <div class="services-grid">
-        <article class="service-card">
-          <span class="service-icon">🚀</span>
+      <div class="services-showcase">
+        <article class="service-card-modern">
+          <div class="service-icon-wrapper">
+            <span class="service-icon">🚀</span>
+          </div>
           <h3>Social Media Warfare</h3>
-          <p>Multi-platform dominance that turns casual scrollers into obsessed customers.</p>
+          <p>Multi-platform dominance that turns casual scrollers into obsessed customers. We don't post—we conquer.</p>
+          <a href="services.html#social" class="service-link">
+            Learn More →
+          </a>
         </article>
-        <article class="service-card">
-          <span class="service-icon">💰</span>
+        
+        <article class="service-card-modern">
+          <div class="service-icon-wrapper">
+            <span class="service-icon">💰</span>
+          </div>
           <h3>Paid Ads Artillery</h3>
-          <p>Precision-targeted campaigns that turn ad spend into profit machines.</p>
+          <p>Precision-targeted campaigns that turn ad spend into profit machines. Every rand returns 5-10x.</p>
+          <a href="services.html#ads" class="service-link">
+            Learn More →
+          </a>
         </article>
-        <article class="service-card">
-          <span class="service-icon">🎨</span>
+        
+        <article class="service-card-modern">
+          <div class="service-icon-wrapper">
+            <span class="service-icon">🎨</span>
+          </div>
           <h3>Brand Architecture</h3>
-          <p>Visual identities so powerful they burn into memory and build loyalty.</p>
+          <p>Visual identities so powerful they burn into memory and build unshakeable loyalty.</p>
+          <a href="services.html#brand" class="service-link">
+            Learn More →
+          </a>
+        </article>
+        
+        <article class="service-card-modern">
+          <div class="service-icon-wrapper">
+            <span class="service-icon">🌟</span>
+          </div>
+          <h3>Influencer Arsenal</h3>
+          <p>Strategic partnerships with voices that move markets and drive sales at scale.</p>
+          <a href="services.html#influencer" class="service-link">
+            Learn More →
+          </a>
+        </article>
+        
+        <article class="service-card-modern">
+          <div class="service-icon-wrapper">
+            <span class="service-icon">📈</span>
+          </div>
+          <h3>Viral Content Engine</h3>
+          <p>Algorithm-optimized content that spreads like wildfire and converts viewers into customers.</p>
+          <a href="services.html#content" class="service-link">
+            Learn More →
+          </a>
+        </article>
+        
+        <article class="service-card-modern">
+          <div class="service-icon-wrapper">
+            <span class="service-icon">⚡</span>
+          </div>
+          <h3>Growth Strategy</h3>
+          <p>Data-driven roadmaps that scale brands from local players to market leaders.</p>
+          <a href="services.html#growth" class="service-link">
+            Learn More →
+          </a>
         </article>
       </div>
       
-      <div class="text-center mt-8">
-        <a href="services.html" class="btn btn-primary">View All Services</a>
+      <div class="section-cta">
+        <a href="services.html" class="btn btn-primary">Explore All Services</a>
       </div>
     </section>
 
     <!-- Featured Case Study -->
-    <section class="section">
-      <div class="text-center mb-8">
-        <span class="tag">Results</span>
-        <h2 class="section-title text-gradient-subtle">Featured Success</h2>
+    <section class="section case-study-section">
+      <div class="section-header">
+        <span class="tag tag-animated">Battle-Tested Results</span>
+        <h2 class="section-title">
+          Featured <span class="text-gradient">Success Story</span>
+        </h2>
       </div>
       
-      <article class="portfolio-card">
-        <div class="portfolio-image">👗</div>
-        <div class="portfolio-content">
-          <span class="portfolio-tag">Fashion / E-commerce</span>
-          <h3>UrbanWear SA</h3>
-          <p>Transformed a local streetwear brand into a national sensation with viral social campaigns.</p>
-          <div class="portfolio-stats">
-            <span class="portfolio-stat"><strong>+450%</strong> Revenue</span>
-            <span class="portfolio-stat"><strong>120K</strong> Followers</span>
-            <span class="portfolio-stat"><strong>8.2x</strong> ROAS</span>
+      <div class="case-study-hero">
+        <div class="case-study-visual">
+          <div class="visual-placeholder">
+            <span class="visual-icon">👗</span>
+            <div class="visual-overlay"></div>
           </div>
         </div>
-      </article>
-      
-      <div class="text-center mt-6">
-        <a href="portfolio.html" class="btn btn-secondary">View All Case Studies</a>
+        <div class="case-study-content">
+          <span class="case-tag">Fashion / E-commerce</span>
+          <h3>UrbanWear SA</h3>
+          <p class="case-desc">Transformed a local streetwear brand into a national sensation with viral social campaigns and precision ad targeting.</p>
+          
+          <div class="case-metrics">
+            <div class="metric">
+              <div class="metric-value">+450%</div>
+              <div class="metric-label">Revenue Growth</div>
+            </div>
+            <div class="metric">
+              <div class="metric-value">120K</div>
+              <div class="metric-label">New Followers</div>
+            </div>
+            <div class="metric">
+              <div class="metric-value">8.2x</div>
+              <div class="metric-label">ROAS</div>
+            </div>
+            <div class="metric">
+              <div class="metric-value">3 Mo</div>
+              <div class="metric-label">Timeline</div>
+            </div>
+          </div>
+          
+          <a href="portfolio.html" class="btn btn-secondary">View All Case Studies</a>
+        </div>
       </div>
     </section>
 
     <!-- Testimonials -->
-    <section class="section">
-      <div class="text-center mb-8">
-        <span class="tag">Testimonials</span>
-        <h2 class="section-title text-gradient-subtle">Client Voices</h2>
+    <section class="section testimonials-section">
+      <div class="section-header">
+        <span class="tag tag-animated">Client Voices</span>
+        <h2 class="section-title">
+          What Our <span class="text-gradient">Empire Builders</span> Say
+        </h2>
       </div>
       
-      <div class="testimonial">
-        <div class="stars">★★★★★</div>
-        <p class="testimonial-text">"KMDynamics didn't just grow our brand—they weaponized it. Our engagement exploded and sales tripled in 90 days."</p>
-        <div class="author">
-          <div class="avatar">M</div>
-          <div class="author-info">
-            <h4>Mpho Kgosana</h4>
-            <span>CEO, UrbanWear SA</span>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="stars">★★★★★</div>
+            <svg class="quote-icon" width="40" height="40" viewBox="0 0 40 40" fill="none">
+              <path d="M10 20c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10-10-4.477-10-10z" fill="currentColor" opacity="0.1"/>
+            </svg>
+          </div>
+          <p class="testimonial-text">"KMDynamics didn't just grow our brand—they weaponized it. Our engagement exploded and sales tripled in 90 days. This isn't marketing. This is warfare."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">M</div>
+            <div class="author-info">
+              <h4>Mpho Kgosana</h4>
+              <span>CEO, UrbanWear SA</span>
+            </div>
           </div>
         </div>
-      </div>
-      
-      <div class="testimonial">
-        <div class="stars">★★★★★</div>
-        <p class="testimonial-text">"These guys are absolute savages. They turned our ad spend into a money printer. ROI went from 2x to 8x in 4 months."</p>
-        <div class="author">
-          <div class="avatar">N</div>
-          <div class="author-info">
-            <h4>Neo Molefe</h4>
-            <span>Founder, FitnessHub</span>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="stars">★★★★★</div>
+            <svg class="quote-icon" width="40" height="40" viewBox="0 0 40 40" fill="none">
+              <path d="M10 20c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10-10-4.477-10-10z" fill="currentColor" opacity="0.1"/>
+            </svg>
+          </div>
+          <p class="testimonial-text">"These guys are absolute savages. They turned our ad spend into a money printer. ROI went from 2x to 8x in 4 months. Game-changers."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">N</div>
+            <div class="author-info">
+              <h4>Neo Molefe</h4>
+              <span>Founder, FitnessHub</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="stars">★★★★★</div>
+            <svg class="quote-icon" width="40" height="40" viewBox="0 0 40 40" fill="none">
+              <path d="M10 20c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10-10-4.477-10-10z" fill="currentColor" opacity="0.1"/>
+            </svg>
+          </div>
+          <p class="testimonial-text">"Professional, ruthless, results-obsessed. They made us the talk of the industry. Our competitors are still playing catch-up."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">K</div>
+            <div class="author-info">
+              <h4>Karabo Theron</h4>
+              <span>Owner, Luxe Beauty</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="section">
-      <div class="cta-box">
-        <h2 class="text-gradient-subtle">Ready To Dominate Your Market?</h2>
-        <p>Stop watching competitors steal your customers. It's time to build an empire.</p>
-        <a href="contact.html" class="btn btn-primary btn-lg">Start Your Domination</a>
+    <section class="section final-cta-section">
+      <div class="final-cta-box">
+        <span class="cta-spark">✨</span>
+        <h2 class="cta-title">Ready To <span class="text-gradient">Dominate</span> Your Market?</h2>
+        <p class="cta-desc">Stop watching competitors steal your customers. It's time to build an empire that lasts.</p>
+        <div class="cta-actions">
+          <a href="contact.html" class="btn btn-primary btn-lg btn-glow">
+            <span>Start Your Domination</span>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M4 10h12m-6-6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="pricing.html" class="btn btn-ghost">View Pricing →</a>
+        </div>
+        <div class="trust-badges">
+          <span>✓ No Lock-In Contracts</span>
+          <span>✓ 98% Retention Rate</span>
+          <span>✓ 24hr Response Time</span>
+        </div>
       </div>
     </section>
   </main>
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="footer-logo">KMDYNAMICS</div>
-    <p class="footer-desc">We don't build brands. We build empires.</p>
-    <nav class="footer-links" aria-label="Footer navigation">
-      <a href="services.html">Services</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <div class="social-links">
-      <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
-      <a href="#" class="social-link" aria-label="LinkedIn">in</a>
-      <a href="#" class="social-link" aria-label="Facebook">fb</a>
-      <a href="#" class="social-link" aria-label="Instagram">ig</a>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <span class="logo-text">KM</span><span class="logo-accent">DYNAMICS</span>
+        </div>
+        <p class="footer-tagline">We don't build brands. We build empires.</p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
+          <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+          <a href="#" class="social-link" aria-label="Facebook">fb</a>
+          <a href="#" class="social-link" aria-label="Instagram">ig</a>
+        </div>
+      </div>
+      
+      <nav class="footer-nav">
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="services.html#social">Social Media</a>
+          <a href="services.html#ads">Paid Ads</a>
+          <a href="services.html#brand">Branding</a>
+          <a href="services.html#content">Content</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="about.html">About Us</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="mailto:kmdynamics1@gmail.com">kmdynamics1@gmail.com</a>
+          <span>Johannesburg, SA</span>
+          <span>Response in 24hrs</span>
+        </div>
+      </nav>
     </div>
-    <p class="copyright">© 2025 KMDynamics. Johannesburg, South Africa</p>
+    
+    <div class="footer-bottom">
+      <p class="copyright">© 2025 KMDynamics. Johannesburg, South Africa</p>
+    </div>
   </footer>
 
-  <!-- Scripts -->
   <script>
     // Mobile Menu Toggle
     function toggleMenu() {
@@ -201,6 +372,7 @@
       link.addEventListener('click', () => {
         document.querySelector('.menu-btn').classList.remove('active');
         document.querySelector('.mobile-nav').classList.remove('active');
+        document.querySelector('.menu-btn').setAttribute('aria-expanded', 'false');
         document.body.style.overflow = '';
       });
     });
@@ -212,33 +384,25 @@
           entry.target.classList.add('animate-in');
         }
       });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.1, rootMargin: '0px 0px -100px 0px' });
 
-    document.querySelectorAll('.service-card, .testimonial, .portfolio-card').forEach(el => {
+    document.querySelectorAll('.service-card-modern, .testimonial-card, .case-study-hero').forEach(el => {
       observer.observe(el);
     });
-  </script>
 
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "KMDynamics",
-    "description": "Strategic marketing agency that transforms ambitious brands into market leaders",
-    "url": "https://kmdynamics.co.za",
-    "logo": "https://kmdynamics.co.za/logo.png",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Johannesburg",
-      "addressCountry": "ZA"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "email": "kmdynamics1@gmail.com",
-      "contactType": "sales"
+    // Parallax effect for gradient orbs
+    if (window.innerWidth > 1024) {
+      document.addEventListener('mousemove', (e) => {
+        const orbs = document.querySelectorAll('.gradient-orb');
+        const x = e.clientX / window.innerWidth;
+        const y = e.clientY / window.innerHeight;
+        
+        orbs.forEach((orb, i) => {
+          const speed = (i + 1) * 20;
+          orb.style.transform = `translate(${x * speed}px, ${y * speed}px)`;
+        });
+      });
     }
-  }
   </script>
 </body>
 </html>
